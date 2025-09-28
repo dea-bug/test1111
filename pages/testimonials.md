@@ -55,7 +55,7 @@ permalink: /testimonials
 .testimonial-style .carousel-inner > .item {
   padding-top: auto;
   padding-bottom: auto;
-  height: 500px;
+  height: 600px;
 }
 /* carousel-left-right-control */
 .testimonial-style .carousel-control.left {
@@ -118,8 +118,8 @@ permalink: /testimonials
     <div class="carousel-inner">
       <div class="item active">
         <div class="carousel-caption testimonial-caption-style">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam.</p>
-          <p class="testimonial-authors">Person 1</p>
+          <p>Powerful work. Great storytellers.</p>
+          <p class="testimonial-authors">Craig Zablocki | Keynote & Motivational Speaker </b><br> //craigzablocki.com </p></p>
         </div>
       </div>
       <div class="item">
