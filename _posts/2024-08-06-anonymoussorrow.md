@@ -8,123 +8,50 @@ image: as-1.jpg
 ---
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Rozha+One");
 @import url("https://fonts.googleapis.com/css?family=Raleway|Rozha+One");
 
-body {
-  background-color: #a4a4a4;
-}
 .col4 {
   width: 33.33333333%;
   float: left;
   position: relative;
 }
+
 .transition {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-body .container {
+
+.container {
   width: 70%;
   margin: 0 auto;
 }
-.fx1 .item,
-.fx2 .item,
-.fx3 .item,
-.fx4 .item,
-.fx5 .item {
-  margin: 10px 0;
-}
-
-/* active on focus for accessibility tab navigation */
-
-.fx1 .item {
-  padding: 0;
-}
-.fx1 .item img {
-  padding: 0 !important;
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.fx1 a:hover .item img,
-.fx1 a:focus .item img {
-  opacity: 0.8;
-}
-.fx1 h4,
-.fx1 p {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.fx1 a .item h4 {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  position: absolute;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: absolute;
-  top: 42%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-  opacity: 0;
-}
-.fx1 a:hover .item h4,
-.fx1 a:focus .item h4 {
-  opacity: 1;
-}
-.fx1 a .item p {
-  font-family: "Raleway", sans-serif;
-  font-size: 8px;
-  position: absolute;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: absolute;
-  top: 52%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-  opacity: 0;
-}
-.fx1 a:hover .item p,
-.fx1 a:focus .item p {
-  opacity: 1;
-}
 
 .fx2 .item {
+  margin: 10px 0;
   padding: 0;
+  cursor: pointer;
 }
+
 .fx2 .item img {
   padding: 0 !important;
   display: block;
   max-width: 100%;
   height: auto;
 }
-.fx2 a:hover .item img,
-.fx2 a:focus .item img {
+
+.fx2 .image-link:hover .item img,
+.fx2 .image-link:focus .item img {
   opacity: 0.9;
-  -webkit-transform: scale(0.95);
   transform: scale(0.95);
 }
+
 .fx2 h4,
-.fx2 p,
-.fx2 span {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+.fx2 p {
   transition: all 0.5s ease;
 }
-.fx2 a .item h4 {
+
+.fx2 .image-link .item h4 {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
-  position: absolute;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -134,20 +61,19 @@ body .container {
   right: 0;
   margin: 0 auto;
   text-align: center;
-  -webkit-filter: blur(5px);
   filter: blur(5px);
   opacity: 0;
 }
-.fx2 a:hover .item h4,
-.fx2 a:focus .item h4 {
-  -webkit-filter: blur(0px);
+
+.fx2 .image-link:hover .item h4,
+.fx2 .image-link:focus .item h4 {
   filter: blur(0px);
   opacity: 1;
 }
-.fx2 a .item p {
+
+.fx2 .image-link .item p {
   font-family: "Raleway", sans-serif;
   font-size: 8px;
-  position: absolute;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -159,139 +85,127 @@ body .container {
   text-align: center;
   opacity: 0;
 }
-.fx2 a:hover .item p,
-.fx2 a:focus .item p {
+
+.fx2 .image-link:hover .item p,
+.fx2 .image-link:focus .item p {
   opacity: 1;
 }
 
-.fx3 .item {
-  padding: 0;
-}
-.fx3 .item img {
-  padding: 0 !important;
-  display: block;
-  max-width: 100%;
-  height: auto;
-  outline: transparent solid 2px;
-  outline-offset: 0px;
-}
-.fx3 a:hover .item img,
-.fx3 a:focus .item img {
-  opacity: 0.8;
-  outline: #fff solid 2px;
-  outline-offset: -10px;
-}
-.fx3 h4,
-.fx3 p {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.fx3 a .item h4 {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  position: absolute;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: absolute;
-  top: 42%;
+/* Modal Styles - Using :target selector */
+.modal {
+  position: fixed;
+  top: 0;
   left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
-}
-.fx3 a:hover .item h4,
-.fx3 a:focus .item h4 {
-  opacity: 1;
-}
-.fx3 a .item p {
-  font-family: "Raleway", sans-serif;
-  font-size: 8px;
-  position: absolute;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: absolute;
-  top: 52%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-  opacity: 0;
-}
-.fx3 a:hover .item p,
-.fx3 a:focus .item p {
-  opacity: 1;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
 }
 
-.fx5 .item {
-  padding: 0;
+.modal:target {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
-.fx5 .item img {
-  padding: 0 !important;
-  display: block;
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.modal:target .modal-content {
+  transform: scale(1);
+}
+
+.modal-image {
   max-width: 100%;
+  max-height: 80vh;
   height: auto;
+  display: block;
 }
-.fx5 a:hover .item img,
-.fx5 a:focus .item img {
-  opacity: 0.8;
-}
-.fx5 h4,
-.fx5 p {
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-.fx5 a .item h4 {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
+
+/* New Animated Close Button */
+.close-button {
+  $size: 50px;
+  height: $size;
+  width: $size;
   position: absolute;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background-color: #b5b5b5;
-  padding: 5px 10px;
-  position: absolute;
-  bottom: 10%;
-  left: 0%;
-  opacity: 0;
+  top: -60px;
+  right: -60px;
+  box-sizing: border-box;
+  line-height: $size;
+  display: inline-block;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  z-index: 3;
+
+  &:before, &:after {
+    $width: 30px;
+    $height: 4px;
+    transform: rotate(-45deg);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -($height / 2);
+    margin-left: -($width / 2);
+    display: block;
+    height: $height;
+    width: $width;
+    background-color: #fff;
+    transition: all 0.2s ease-out;
+    border-radius: 2px;
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+    
+    &:before, &:after {
+      transform: rotate(0deg);
+    }
+  }
 }
-.fx5 a:hover .item h4,
-.fx5 a:focus .item h4 {
-  opacity: 1;
-  left: 10%;
-}
-.fx5 a .item p {
-  font-family: "Raleway", sans-serif;
-  font-size: 8px;
-  position: absolute;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background-color: #b5b5b5;
-  padding: 5px 10px;
-  position: absolute;
-  bottom: 7%;
-  left: 0%;
-  opacity: 0;
-}
-.fx5 a:hover .item p,
-.fx5 a:focus .item p {
-  opacity: 1;
-  left: 10%;
+
+/* Hide the fallback element */
+#close {
+  display: none;
 }
 
 @media screen and (max-width: 991px) {
   .col4 {
     width: 50%;
   }
-  .fx5 a .item h4 {
-    font-size: 13px;
+  .close-button {
+    right: 0;
+    top: -70px;
   }
 }
 
@@ -299,124 +213,91 @@ body .container {
   .col4 {
     width: 100%;
   }
+  .modal-content {
+    max-width: 95%;
+  }
+  .close-button {
+    right: 0;
+    top: -60px;
+    $size: 40px;
+    height: $size;
+    width: $size;
+    
+    &:before, &:after {
+      $width: 24px;
+      $height: 3px;
+      margin-top: -($height / 2);
+      margin-left: -($width / 2);
+      height: $height;
+      width: $width;
+    }
+  }
 }
-
 </style>
 
+
+
 <div class="container">
-<div class="container">
+    <div class="fx2">
+        <!-- Image 1 -->
+        <a href="#image1" class="image-link">
+            <div class="item col4">
+                <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+                <h4>title image</h4>
+                <p>Description</p>
+            </div>
+        </a>
         
-        <div class="fx1">
+        <!-- Image 2 -->
+        <a href="#image2" class="image-link">
+            <div class="item col4">
+                <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+                <h4>title image</h4>
+                <p>Description</p>
+            </div>
+        </a>
+        
+        <!-- Image 3 -->
+        <a href="#image3" class="image-link">
+            <div class="item col4">
+                <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+                <h4>title image</h4>
+                <p>Description</p>
+            </div>
+        </a>
+    </div> 
+</div>
 
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            
-        </div>  
-        
-        <div class="fx2">
-
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            
-        </div> 
-        
-        
-        <div class="fx3">
-
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            
-        </div> 
-        
-        
-        <div class="fx5">
-
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            <a href="#">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>title image</h4>
-                    <p>Description</p>
-                </div>
-            </a>
-            
-        </div> 
-         
-
+<!-- Modals -->
+<div class="modal" id="image1">
+    <a href="#" class="modal-close"></a>
+    <div class="modal-content">
+        <img src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" class="modal-image">
+        <a href="#" class="close-button"></a>
     </div>
 </div>
 
+<div class="modal" id="image2">
+    <a href="#" class="modal-close"></a>
+    <div class="modal-content">
+        <img src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" class="modal-image">
+        <a href="#" class="close-button"></a>
+    </div>
+</div>
 
+<div class="modal" id="image3">
+    <a href="#" class="modal-close"></a>
+    <div class="modal-content">
+        <img src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" class="modal-image">
+        <a href="#" class="close-button"></a>
+    </div>
+</div>
+
+<!-- Fallback for closing -->
+<div id="close"></div>
+
+
+end of whateverever
 
 <iframe src="https://player.vimeo.com/video/997865296?h=715e669524&color=7a1818&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
