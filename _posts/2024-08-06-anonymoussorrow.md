@@ -21,8 +21,8 @@ image: as-1.jpg
 }
 
 .container {
-  width: 99%;
-  margin: 0 auto;
+  width: 33.333%;
+  margin: 1 auto;
 }
 
 .fx2 .item {
