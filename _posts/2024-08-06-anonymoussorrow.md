@@ -21,7 +21,7 @@ image: as-1.jpg
 }
 
 .container {
-  width: 70%;
+  width: 120%;
   margin: 0 auto;
 }
 
