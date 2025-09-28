@@ -146,27 +146,52 @@ image: as-1.jpg
   display: block;
 }
 
-.close-btn {
+/* New Animated Close Button */
+.close-button {
+  $size: 50px;
+  height: $size;
+  width: $size;
   position: absolute;
-  top: -50px;
-  right: -50px;
-  color: white;
-  font-size: 40px;
+  top: -60px;
+  right: -60px;
+  box-sizing: border-box;
+  line-height: $size;
+  display: inline-block;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.7);
-  width: 50px;
-  height: 50px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
   transition: background 0.3s ease;
   z-index: 3;
-}
 
-.close-btn:hover {
-  background: rgba(0, 0, 0, 0.9);
+  &:before, &:after {
+    $width: 30px;
+    $height: 4px;
+    transform: rotate(-45deg);
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -($height / 2);
+    margin-left: -($width / 2);
+    display: block;
+    height: $height;
+    width: $width;
+    background-color: #fff;
+    transition: all 0.2s ease-out;
+    border-radius: 2px;
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+    
+    &:before, &:after {
+      transform: rotate(0deg);
+    }
+  }
 }
 
 /* Hide the fallback element */
@@ -178,9 +203,9 @@ image: as-1.jpg
   .col4 {
     width: 50%;
   }
-  .close-btn {
+  .close-button {
     right: 0;
-    top: -60px;
+    top: -70px;
   }
 }
 
@@ -191,24 +216,31 @@ image: as-1.jpg
   .modal-content {
     max-width: 95%;
   }
-  .close-btn {
+  .close-button {
     right: 0;
-    top: -50px;
-    font-size: 30px;
-    width: 40px;
-    height: 40px;
+    top: -60px;
+    $size: 40px;
+    height: $size;
+    width: $size;
+    
+    &:before, &:after {
+      $width: 24px;
+      $height: 3px;
+      margin-top: -($height / 2);
+      margin-left: -($width / 2);
+      height: $height;
+      width: $width;
+    }
   }
 }
 </style>
-
-
 
 <div class="container">
     <div class="fx2">
         <!-- Image 1 -->
         <a href="#image1" class="image-link">
             <div class="item col4">
-                <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+                <img class="transition img-responsive" src="{{site.baseurl}}/assets/img/as-2.jpg">
                 <h4>title image</h4>
                 <p>Description</p>
             </div>
@@ -217,7 +249,7 @@ image: as-1.jpg
         <!-- Image 2 -->
         <a href="#image2" class="image-link">
             <div class="item col4">
-                <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+                <img class="transition img-responsive" src="{{site.baseurl}}/assets/img/as-2.jpg">
                 <h4>title image</h4>
                 <p>Description</p>
             </div>
@@ -226,7 +258,7 @@ image: as-1.jpg
         <!-- Image 3 -->
         <a href="#image3" class="image-link">
             <div class="item col4">
-                <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+                <img class="transition img-responsive" src="{{site.baseurl}}/assets/img/as-2.jpg">
                 <h4>title image</h4>
                 <p>Description</p>
             </div>
@@ -238,24 +270,24 @@ image: as-1.jpg
 <div class="modal" id="image1">
     <a href="#" class="modal-close"></a>
     <div class="modal-content">
-        <img src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" class="modal-image">
-        <a href="#" class="close-btn">&times;</a>
+        <img src="{{site.baseurl}}/assets/img/as-2.jpg" class="modal-image">
+        <a href="#" class="close-button"></a>
     </div>
 </div>
 
 <div class="modal" id="image2">
     <a href="#" class="modal-close"></a>
     <div class="modal-content">
-        <img src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" class="modal-image">
-        <a href="#" class="close-btn">&times;</a>
+        <img src="{{site.baseurl}}/assets/img/as-2.jpg" class="modal-image">
+        <a href="#" class="close-button"></a>
     </div>
 </div>
 
 <div class="modal" id="image3">
     <a href="#" class="modal-close"></a>
     <div class="modal-content">
-        <img src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" class="modal-image">
-        <a href="#" class="close-btn">&times;</a>
+        <img src="{{site.baseurl}}/assets/img/as-2.jpg" class="modal-image">
+        <a href="#" class="close-button"></a>
     </div>
 </div>
 
