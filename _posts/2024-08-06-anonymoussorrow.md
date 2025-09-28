@@ -8,176 +8,257 @@ image: as-1.jpg
 ---
 
 <style>
-:root {
+@import url("https://fonts.googleapis.com/css?family=Raleway|Rozha+One");
 
-	--section-spacing-block: 10rem;
-	--container-slim-max-wdith: 50rem;
-	--container-max-wdith: 100rem;
-
-	background: #080e17;
-	color: white;
-	line-height: 1.6;
-	font-family: system-ui;
+.col4 {
+  width: 33.33333333%;
+  float: left;
+  position: relative;
 }
 
-
-body {
-	margin: 0;
+.transition {
+  transition: all 0.5s ease;
 }
-
-p {
-	margin: 2em 0;
-}
-
-.cover-flow {
-	perspective: 100rem;
-	// overflow: clip;
-	padding: 4rem 0;
-
-	&__track {
-		transform-style: preserve-3d;
-		display: grid;
-	}
-
-	&__space {
-		transform-style: preserve-3d;
-		view-timeline-name: --name-space;
-		view-timeline-axis: block;
-	}
-
-	&__cover {
-		margin: 0 auto;
-		display: block;
-		width: 31.25rem;
-		max-width: 80wv;
-		object-fit: cover;
-		animation: linear cover both;
-		animation-timeline: view(block);
-		transform-style: preserve-3d;
-		will-change: transform;
-		position: relative;
-		user-select: none;
-		border-radius: .5rem;
-		animation-timeline: --name-space;
-		// animation-range: contain 0% contain 100%;
-
-		/*
-		animation: cover auto linear both;
-		animation-range: contain 0% contain 100%;
-		animation-timeline: --sticky-timeline;
-		*/
-	}
-
-}
-
-
-.sticky-section_ {
-	height: 300vh;
-	position: relative;
-
-	view-timeline-name: --sticky-timeline;
-	view-timeline-axis: block;
-
-	&__stack {
-		position: sticky;
-		top: 0;
-	}
-
-}
-
-
-.section {
-	margin-block: 10rem;
-}
-
-.wrapping {
-	padding-inline: var(--wrapper-spacing);
-}
-
 
 .container {
-	margin-inline: auto;
-	max-width: var(--container-max-wdith);
-
-	&--slim {
-		--container-max-wdith: var(--container-slim-max-wdith);
-	}
-
+  width: 99%;
+  margin: 0 auto;
 }
 
+.fx2 .item {
+  margin: 10px 0;
+  padding: 0;
+  cursor: pointer;
+}
 
-@keyframes cover {
-	0% {
-		transform: translateY(-100%) rotateX(45deg);
-	}
-	35% {
-		transform: translateY(0) rotateX(45deg);
-	}
-	50% {
-		box-shadow: 0 0 1rem .5rem #00000080;
-		transform: rotateX(0deg) translateZ(14em) scale(1.2);
-	}
-	65% {
-		transform: translateY(0) rotateX(-45deg);
-	}
-	100% {
-		transform: translateY(100%) rotateX(-45deg);
-	}
+.fx2 .item img {
+  padding: 0 !important;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.fx2 .image-link:hover .item img,
+.fx2 .image-link:focus .item img {
+  opacity: 0.9;
+  transform: scale(0.95);
+}
+
+.fx2 h4,
+.fx2 p {
+  transition: all 0.5s ease;
+}
+
+.fx2 .image-link .item h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 42%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  filter: blur(5px);
+  opacity: 0;
+}
+
+.fx2 .image-link:hover .item h4,
+.fx2 .image-link:focus .item h4 {
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.fx2 .image-link .item p {
+  font-family: "Raleway", sans-serif;
+  font-size: 8px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 53%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0;
+}
+
+.fx2 .image-link:hover .item p,
+.fx2 .image-link:focus .item p {
+  opacity: 1;
+}
+
+/* Modal Styles - Using :target selector */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.modal:target {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.modal:target .modal-content {
+  transform: scale(1);
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  height: auto;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  z-index: 3;
+}
+
+.close-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Hide the fallback element */
+#close {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .col4 {
+    width: 50%;
+  }
+  .close-btn {
+    right: 0;
+    top: -60px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .col4 {
+    width: 100%;
+  }
+  .modal-content {
+    max-width: 95%;
+  }
+  .close-btn {
+    right: 0;
+    top: -50px;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 </style>
-<div class="section">
-	<div class="wrapping">
-		<div class="container container--slim">
-			<div>
-				<h1>Moments by the Sea</h1>
-				<p>From the powerful curl of ocean waves to the quiet presence of a lone starfish, these images capture the serene beauty of the shoreline — where sand meets sea and nature speaks in tides.</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="section">
-	<div class="wrapping">
-		<div class="container container--slim">
-			<div class="cover-flow">
-				<div class="cover-flow__track">
-					<div class="cover-flow__space"><img src="https://images.unsplash.com/photo-1501949997128-2fdb9f6428f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIyNjYzNTZ8&ixlib=rb-4.1.0&q=80&h=900" alt="Closeup of a curling ocean wave." title="photo by Jeremy Bishop for Unsplash" class="cover-flow__cover"></div>
-					<div class="cover-flow__space"><img src="https://images.unsplash.com/photo-1476673160081-cf065607f449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIyNjYzOTJ8&ixlib=rb-4.1.0&q=80&h=900" alt="Foamy waves gently lapping a sandy beach shore." title="photo by Frank McKenna for Unsplash" class="cover-flow__cover"></div>
-					<div class="cover-flow__space"><img src="https://images.unsplash.com/photo-1490365728022-deae76380607?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIyNjY0Mjd8&ixlib=rb-4.1.0&q=80&h=900" alt="A starfish at the shallow edge of ocean water, alone on a backdrop of white sand." title="photo by Amy Humphries for Unsplash" class="cover-flow__cover"></div>
-					<div class="cover-flow__space"><img src="https://images.unsplash.com/photo-1506252374453-ef5237291d83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NTIyNjY0NzR8&ixlib=rb-4.1.0&q=80&h=900" alt="An aerial view of waves rolling onto a sandy beach." title="photo by Samuel Scrimshaw for Unsplash" class="cover-flow__cover"></div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<div class="section">
-	<div class="wrapping">
-		<div class="container container--slim">
-			<div>
-				<h2>Reflections from the Shore</h2>
-				<p>
-					Waves curl and crash in a rhythm older than time, their motion a reminder of nature's quiet strength.
-				</p>
-				<p>
-					Foam traces the shoreline in gentle pulses, smoothing the sand and softening the edges of the world.
-				</p>
-				<p>
-					At the water’s edge, a lone starfish rests — still, patient, and perfectly placed in the morning light.
-				</p>
-				<p>
-					From above, the sea paints patterns on the beach, each wave a brushstroke on the canvas of the coast.
-				</p>
-				<p>
-					These moments are fleeting, but in their stillness, they hold something lasting — peace, motion, and the simple poetry of tide and sand.
-				</p>
-			</div>
-		</div>
-	</div>
+<div class="container">
+    <div class="fx2">
+        <!-- Image 1 -->
+        <a href="#image1" class="image-link">
+            <div class="item col4">
+                <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+                <h4>title image</h4>
+                <p>Description</p>
+            </div>
+        </a>
+        
+        <!-- Image 2 -->
+        <a href="#image2" class="image-link">
+            <div class="item col4">
+                <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+                <h4>title image</h4>
+                <p>Description</p>
+            </div>
+        </a>
+        
+        <!-- Image 3 -->
+        <a href="#image3" class="image-link">
+            <div class="item col4">
+                <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+                <h4>title image</h4>
+                <p>Description</p>
+            </div>
+        </a>
+    </div> 
 </div>
 
+<!-- Modals -->
+<div class="modal" id="image1">
+    <a href="#" class="modal-close"></a>
+    <div class="modal-content">
+        <img src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" class="modal-image">
+        <a href="#" class="close-btn">&times;</a>
+    </div>
+</div>
+
+<div class="modal" id="image2">
+    <a href="#" class="modal-close"></a>
+    <div class="modal-content">
+        <img src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" class="modal-image">
+        <a href="#" class="close-btn">&times;</a>
+    </div>
+</div>
+
+<div class="modal" id="image3">
+    <a href="#" class="modal-close"></a>
+    <div class="modal-content">
+        <img src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" class="modal-image">
+        <a href="#" class="close-btn">&times;</a>
+    </div>
+</div>
+
+<!-- Fallback for closing -->
+<div id="close"></div>
 
 <br>
 
