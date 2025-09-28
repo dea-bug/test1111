@@ -59,9 +59,11 @@ img:hover {
 }
 </style>
 
+<html>
 - const COUNT = 5
 .container
   - let i = 0
   while i < COUNT
     img(src=`https://source.unsplash.com/random/600x600?bear,seed=${i * 100}`)
     - i++
+</html>
