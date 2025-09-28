@@ -15,6 +15,7 @@ permalink: /testimonials
 <br><b>Craig Zablocki | Keynote & Motivational Speaker </b><br> //craigzablocki.com </p>
 
 <br>
+
 <style>
 /* Testimonial CSS Code Start */
 /* background */
@@ -54,7 +55,7 @@ permalink: /testimonials
 .testimonial-style .carousel-inner > .item {
   padding-top: auto;
   padding-bottom: auto;
-  height: 380px;
+  height: 500px;
 }
 /* carousel-left-right-control */
 .testimonial-style .carousel-control.left {
