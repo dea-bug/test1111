@@ -219,8 +219,8 @@ image: as-1.jpg
         body {
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
-            padding: 20px;
+            /* Removed background color */
+            padding: 0; /* Fixed padding issue causing right shift */
         }
 
         /* Gallery container */
@@ -228,14 +228,14 @@ image: as-1.jpg
             width: 100%;
             max-width: 1200px;
             margin: 0 auto 30px;
-            overflow: hidden; /* Clear floats */
+            overflow: hidden;
         }
 
         .fx2 {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 0 -10px; /* Negative margin to counteract item padding */
+            margin: 0 -10px;
         }
 
         .col4 {
@@ -253,7 +253,6 @@ image: as-1.jpg
             padding: 0;
             cursor: pointer;
             overflow: hidden;
-            /* Removed border-radius */
         }
 
         .fx2 .item img {
@@ -275,6 +274,7 @@ image: as-1.jpg
         }
 
         .fx2 .image-link .item h4 {
+            font-family: "Raleway", sans-serif;
             font-size: 16px;
             color: #fff;
             text-transform: uppercase;
@@ -296,6 +296,7 @@ image: as-1.jpg
         }
 
         .fx2 .image-link .item p {
+            font-family: "Raleway", sans-serif;
             font-size: 8px;
             color: #fff;
             text-transform: uppercase;
@@ -317,9 +318,8 @@ image: as-1.jpg
         /* Video container - matches gallery width */
         .video-container {
             width: 100%;
-            max-width: 640px; /* Same as Vimeo iframe width */
+            max-width: 640px;
             margin: 0 auto;
-            background: #fff;
             padding: 10px;
         }
 
@@ -339,7 +339,7 @@ image: as-1.jpg
             border: none;
         }
 
-        /* Fixed Modal Styles */
+        /* Modal Styles */
         .modal {
             position: fixed;
             top: 0;
