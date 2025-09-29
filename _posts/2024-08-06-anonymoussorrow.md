@@ -7,522 +7,139 @@ tags: [gallery, color grading, editing]
 image: as-1.jpg
 ---
 
-<style>
-@import url("https://fonts.googleapis.com/css?family=Raleway|Rozha+One");
-
-.col4 {
-  width: 33.33333333%;
-  float: left;
-  position: relative;
-}
-
-.transition {
-  transition: all 0.5s ease;
-}
-
-.container {
-  width: 33.333%;
-  margin: 1 auto;
-}
-
-.fx2 .item {
-  margin: 10px 0;
-  padding: 0;
-  cursor: pointer;
-}
-
-.fx2 .item img {
-  padding: 0 !important;
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.fx2 .image-link:hover .item img,
-.fx2 .image-link:focus .item img {
-  opacity: 0.9;
-  transform: scale(0.95);
-}
-
-.fx2 h4,
-.fx2 p {
-  transition: all 0.5s ease;
-}
-
-.fx2 .image-link .item h4 {
-  font-family: "Raleway", sans-serif;
-  font-size: 16px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: absolute;
-  top: 42%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-  filter: blur(5px);
-  opacity: 0;
-}
-
-.fx2 .image-link:hover .item h4,
-.fx2 .image-link:focus .item h4 {
-  filter: blur(0px);
-  opacity: 1;
-}
-
-.fx2 .image-link .item p {
-  font-family: "Raleway", sans-serif;
-  font-size: 8px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: absolute;
-  top: 53%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-  opacity: 0;
-}
-
-.fx2 .image-link:hover .item p,
-.fx2 .image-link:focus .item p {
-  opacity: 1;
-}
-
-/* Modal Styles - Using :target selector */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-.modal:target {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-.modal-close {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.modal-content {
-  position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  text-align: center;
-  transform: scale(0.8);
-  transition: transform 0.3s ease;
-  z-index: 2;
-}
-
-.modal:target .modal-content {
-  transform: scale(1);
-}
-
-.modal-image {
-  max-width: 100%;
-  max-height: 80vh;
-  height: auto;
-  display: block;
-}
-
-.close-btn {
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  color: white;
-  font-size: 40px;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.7);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: background 0.3s ease;
-  z-index: 3;
-}
-
-.close-btn:hover {
-  background: rgba(0, 0, 0, 0.9);
-}
-
-/* Hide the fallback element */
-#close {
-  display: none;
-}
-
-@media screen and (max-width: 991px) {
-  .col4 {
-    width: 50%;
-  }
-  .close-btn {
-    right: 0;
-    top: -60px;
-  }
-}
-
-@media screen and (max-width: 580px) {
-  .col4 {
-    width: 100%;
-  }
-  .modal-content {
-    max-width: 95%;
-  }
-  .close-btn {
-    right: 0;
-    top: -50px;
-    font-size: 30px;
-    width: 40px;
-    height: 40px;
-  }
-}
-
-</style>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vimeo Gallery</title>
+    <title>Photo Gallery Widget</title>
     <style>
-        /* Reset and base styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            line-height: 1.6;
-            color: #333;
-            /* Removed background color */
-            padding: 0; /* Fixed padding issue causing right shift */
-        }
-
-        /* Gallery container */
-        .gallery-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto 30px;
-            overflow: hidden;
-        }
-
-        .fx2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 0 -10px;
-        }
-
-        .col4 {
-            width: 33.33333333%;
-            padding: 10px;
-            position: relative;
-        }
-
-        .transition {
-            transition: all 0.5s ease;
-        }
-
-        .fx2 .item {
-            margin: 0;
-            padding: 0;
-            cursor: pointer;
-            overflow: hidden;
-        }
-
-        .fx2 .item img {
-            padding: 0 !important;
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .fx2 .image-link:hover .item img,
-        .fx2 .image-link:focus .item img {
-            opacity: 0.9;
-            transform: scale(0.95);
-        }
-
-        .fx2 h4,
-        .fx2 p {
-            transition: all 0.5s ease;
-        }
-
-        .fx2 .image-link .item h4 {
-            font-family: "Raleway", sans-serif;
-            font-size: 16px;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: absolute;
-            top: 42%;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            text-align: center;
-            filter: blur(5px);
-            opacity: 0;
-        }
-
-        .fx2 .image-link:hover .item h4,
-        .fx2 .image-link:focus .item h4 {
-            filter: blur(0px);
-            opacity: 1;
-        }
-
-        .fx2 .image-link .item p {
-            font-family: "Raleway", sans-serif;
-            font-size: 8px;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: absolute;
-            top: 53%;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            text-align: center;
-            opacity: 0;
-        }
-
-        .fx2 .image-link:hover .item p,
-        .fx2 .image-link:focus .item p {
-            opacity: 1;
-        }
-
-        /* Video container - matches gallery width */
-        .video-container {
-            width: 100%;
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 10px;
-        }
-
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Modal Styles */
-        .modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 1000;
-            pointer-events: none;
-        }
-
-        .modal:target {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: auto;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-            z-index: 1;
-        }
-
-        .modal-content {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            text-align: center;
-            transform: scale(0.8);
-            transition: transform 0.3s ease;
-            z-index: 2;
-        }
-
-        .modal:target .modal-content {
-            transform: scale(1);
-        }
-
-        .modal-image {
+        /* Gallery Styles */
+        .photo-gallery {
             max-width: 100%;
-            max-height: 80vh;
-            height: auto;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 10px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 1 / 1;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
+            transition: transform 0.5s ease;
         }
-
-        .close-btn {
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .image-caption {
             position: absolute;
-            top: -50px;
-            right: -50px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
             color: white;
-            font-size: 40px;
-            cursor: pointer;
-            background: rgba(0, 0, 0, 0.7);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: background 0.3s ease;
-            z-index: 3;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            font-size: 14px;
+            text-align: center;
         }
-
-        .close-btn:hover {
-            background: rgba(0, 0, 0, 0.9);
+        
+        .gallery-item:hover .image-caption {
+            transform: translateY(0);
         }
-
-        /* Hide the fallback element */
-        #close {
-            display: none;
-        }
-
+        
         /* Responsive adjustments */
-        @media screen and (max-width: 991px) {
-            .col4 {
-                width: 50%;
-            }
-            .close-btn {
-                right: 0;
-                top: -60px;
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
             }
         }
-
-        @media screen and (max-width: 768px) {
-            .video-container {
-                padding: 5px;
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 8px;
             }
-        }
-
-        @media screen and (max-width: 580px) {
-            .col4 {
-                width: 100%;
-            }
-            .modal-content {
-                max-width: 95%;
-            }
-            .close-btn {
-                right: 0;
-                top: -50px;
-                font-size: 30px;
-                width: 40px;
-                height: 40px;
+            
+            .gallery-title {
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Image Gallery -->
-    <div class="gallery-container">
-        <div class="fx2">
-            <!-- Image 1 -->
-            <a href="#image1" class="image-link">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                    <h4>Title Image 1</h4>
-                    <p>Description for image 1</p>
-                </div>
-            </a>
+    <div class="photo-gallery">
+        <h2 class="gallery-title">My Photo Gallery</h2>
+        <div class="gallery-grid">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mountain landscape">
+                <div class="image-caption">Mountain Landscape</div>
+            </div>
             
-            <!-- Image 2 -->
-            <a href="#image2" class="image-link">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1050&q=60">
-                    <h4>Title Image 2</h4>
-                    <p>Description for image 2</p>
-                </div>
-            </a>
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Forest path">
+                <div class="image-caption">Forest Path</div>
+            </div>
             
-            <!-- Image 3 -->
-            <a href="#image3" class="image-link">
-                <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1050&q=60">
-                    <h4>Title Image 3</h4>
-                    <p>Description for image 3</p>
-                </div>
-            </a>
-        </div> 
-    </div>
-
-    <!-- Vimeo Video -->
-    <div class="video-container">
-        <div class="video-wrapper">
-            <iframe src="https://player.vimeo.com/video/997865296?h=715e669524&color=7a1818&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Lake view">
+                <div class="image-caption">Lake View</div>
+            </div>
+            
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Beach sunset">
+                <div class="image-caption">Beach Sunset</div>
+            </div>
+            
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mountain peaks">
+                <div class="image-caption">Mountain Peaks</div>
+            </div>
+            
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Misty forest">
+                <div class="image-caption">Misty Forest</div>
+            </div>
         </div>
     </div>
-
-    <!-- Modals -->
-    <div class="modal" id="image1">
-        <a href="#" class="modal-close"></a>
-        <div class="modal-content">
-            <img src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" class="modal-image">
-            <a href="#" class="close-btn">&times;</a>
-        </div>
-    </div>
-
-    <div class="modal" id="image2">
-        <a href="#" class="modal-close"></a>
-        <div class="modal-content">
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1050&q=60" class="modal-image">
-            <a href="#" class="close-btn">&times;</a>
-        </div>
-    </div>
-
-    <div class="modal" id="image3">
-        <a href="#" class="modal-close"></a>
-        <div class="modal-content">
-            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1050&q=60" class="modal-image">
-            <a href="#" class="close-btn">&times;</a>
-        </div>
-    </div>
-
-    <!-- Fallback for closing -->
-    <div id="close"></div>
 </body>
 </html>
 
