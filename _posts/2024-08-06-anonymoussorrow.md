@@ -12,19 +12,18 @@ image: as-1.jpg
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery Widget</title>
     <style>
         /* Gallery Styles */
         .photo-gallery {
             max-width: 100%;
             margin: 20px auto;
-            font-family: Arial, sans-serif;
+            font-family: Roboto, sans-serif;
         }
         
         .gallery-title {
             text-align: center;
             margin-bottom: 20px;
-            color: #333;
+            color: white;
             font-size: 24px;
         }
         
@@ -38,7 +37,7 @@ image: as-1.jpg
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
+            border-radius: 0px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             aspect-ratio: 1 / 1;
@@ -66,17 +65,25 @@ image: as-1.jpg
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0,0,0,0.7);
             color: white;
-            padding: 10px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
+            letter-spacing: 2px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            transition: all 0.3s ease;
             font-size: 14px;
             text-align: center;
+            filter: blur(3px); /* make 3 */
+            opacity: 0; /* make 0 */
         }
         
         .gallery-item:hover .image-caption {
             transform: translateY(0);
+            filter: blur(0px);
+  opacity: 1;
         }
         
         /* Responsive adjustments */
@@ -101,7 +108,6 @@ image: as-1.jpg
 </head>
 <body>
     <div class="photo-gallery">
-        <h2 class="gallery-title">My Photo Gallery</h2>
         <div class="gallery-grid">
             <!-- Gallery Item 1 -->
             <div class="gallery-item">
