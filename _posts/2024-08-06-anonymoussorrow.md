@@ -7,7 +7,7 @@ tags: [gallery, color grading, editing]
 image: as-1.jpg
 ---
 
-<!DOCTYPE html>
+@import url("https://fonts.googleapis.com/css?family=Raleway|Rozha+One");
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@ image: as-1.jpg
         .photo-gallery {
             max-width: 100%;
             margin: 20px auto;
-            font-family: Roboto, sans-serif;
+            font-family: Raleway, sans-serif;
         }
         
         .gallery-title {
@@ -44,8 +44,8 @@ image: as-1.jpg
         }
         
         .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  opacity: 0.9;
+  transform: scale(0.95);
         }
         
         .gallery-item img {
@@ -54,10 +54,6 @@ image: as-1.jpg
             object-fit: cover;
             display: block;
             transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
         }
         
         .image-caption {
@@ -119,7 +115,7 @@ image: as-1.jpg
             <div class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Forest path">
                 <div class="image-caption">Forest Path</div>
-            </div>
+            </div> 
             
             <!-- Gallery Item 3 -->
             <div class="gallery-item">
