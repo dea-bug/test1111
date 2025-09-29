@@ -23,7 +23,9 @@ Camera Assistant: Drew Boysen @drew.boysen <br>
 
 
 <img src="{{site.baseurl}}/assets/img/as-2.jpg">
-
+<br>
+new
+<br>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Raleway|Rozha+One");
 </style>
