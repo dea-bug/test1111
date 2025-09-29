@@ -207,10 +207,8 @@ image: as-1.jpg
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Vimeo Gallery</title>
+    <title>Vimeo Gallery</title>
     <style>
-        @import url("https://fonts.googleapis.com/css?family=Raleway|Rozha+One");
-
         /* Reset and base styles */
         * {
             box-sizing: border-box;
@@ -219,36 +217,16 @@ image: as-1.jpg
         }
 
         body {
-            font-family: "Raleway", sans-serif;
             line-height: 1.6;
             color: #333;
             background-color: #f9f9f9;
-        }
-
-        /* Header and Footer Styles */
-        header, footer {
-            text-align: center;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
         }
 
-        footer {
-            margin-top: 30px;
-            margin-bottom: 0;
-        }
-
-        /* Main container */
-        .main-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Gallery container - now responsive */
+        /* Gallery container */
         .gallery-container {
             width: 100%;
+            max-width: 1200px;
             margin: 0 auto 30px;
             overflow: hidden; /* Clear floats */
         }
@@ -256,6 +234,7 @@ image: as-1.jpg
         .fx2 {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             margin: 0 -10px; /* Negative margin to counteract item padding */
         }
 
@@ -274,8 +253,7 @@ image: as-1.jpg
             padding: 0;
             cursor: pointer;
             overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            /* Removed border-radius */
         }
 
         .fx2 .item img {
@@ -297,7 +275,6 @@ image: as-1.jpg
         }
 
         .fx2 .image-link .item h4 {
-            font-family: "Raleway", sans-serif;
             font-size: 16px;
             color: #fff;
             text-transform: uppercase;
@@ -319,7 +296,6 @@ image: as-1.jpg
         }
 
         .fx2 .image-link .item p {
-            font-family: "Raleway", sans-serif;
             font-size: 8px;
             color: #fff;
             text-transform: uppercase;
@@ -345,8 +321,6 @@ image: as-1.jpg
             margin: 0 auto;
             background: #fff;
             padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
 
         .video-wrapper {
@@ -365,7 +339,7 @@ image: as-1.jpg
             border: none;
         }
 
-        /* Modal Styles - Using :target selector */
+        /* Fixed Modal Styles */
         .modal {
             position: fixed;
             top: 0;
@@ -483,49 +457,42 @@ image: as-1.jpg
     </style>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio Gallery</h1>
-        <p>Beautiful images and videos</p>
-    </header>
+    <!-- Image Gallery -->
+    <div class="gallery-container">
+        <div class="fx2">
+            <!-- Image 1 -->
+            <a href="#image1" class="image-link">
+                <div class="item col4">
+                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
+                    <h4>Title Image 1</h4>
+                    <p>Description for image 1</p>
+                </div>
+            </a>
+            
+            <!-- Image 2 -->
+            <a href="#image2" class="image-link">
+                <div class="item col4">
+                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1050&q=60">
+                    <h4>Title Image 2</h4>
+                    <p>Description for image 2</p>
+                </div>
+            </a>
+            
+            <!-- Image 3 -->
+            <a href="#image3" class="image-link">
+                <div class="item col4">
+                    <img class="transition img-responsive" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1050&q=60">
+                    <h4>Title Image 3</h4>
+                    <p>Description for image 3</p>
+                </div>
+            </a>
+        </div> 
+    </div>
 
-    <div class="main-container">
-        <!-- Image Gallery -->
-        <div class="gallery-container">
-            <div class="fx2">
-                <!-- Image 1 -->
-                <a href="#image1" class="image-link">
-                    <div class="item col4">
-                        <img class="transition img-responsive" src="https://images.unsplash.com/photo-1461611034385-e082102d5c75?auto=format&fit=crop&w=1050&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D">
-                        <h4>Title Image 1</h4>
-                        <p>Description for image 1</p>
-                    </div>
-                </a>
-                
-                <!-- Image 2 -->
-                <a href="#image2" class="image-link">
-                    <div class="item col4">
-                        <img class="transition img-responsive" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1050&q=60">
-                        <h4>Title Image 2</h4>
-                        <p>Description for image 2</p>
-                    </div>
-                </a>
-                
-                <!-- Image 3 -->
-                <a href="#image3" class="image-link">
-                    <div class="item col4">
-                        <img class="transition img-responsive" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1050&q=60">
-                        <h4>Title Image 3</h4>
-                        <p>Description for image 3</p>
-                    </div>
-                </a>
-            </div> 
-        </div>
-
-        <!-- Vimeo Video -->
-        <div class="video-container">
-            <div class="video-wrapper">
-                <iframe src="https://player.vimeo.com/video/997865296?h=715e669524&color=7a1818&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
+    <!-- Vimeo Video -->
+    <div class="video-container">
+        <div class="video-wrapper">
+            <iframe src="https://player.vimeo.com/video/997865296?h=715e669524&color=7a1818&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -556,13 +523,8 @@ image: as-1.jpg
 
     <!-- Fallback for closing -->
     <div id="close"></div>
-
-    <footer>
-        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
-    </footer>
 </body>
 </html>
-
 
 <br>
 original
