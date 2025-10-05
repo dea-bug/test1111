@@ -4,7 +4,7 @@ title: "PEARL JAM: DARK MATTER WORLD TOUR 2024"
 author: "Deana Seitz and Aster Teter"
 categories: music videos
 tags: [music videos, color grading, editing, visuals]
-image: braiding.jpg
+image: pjdm-header.jpg
 ---
 
 [placeholder for main image]
