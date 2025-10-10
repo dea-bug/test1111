@@ -6,7 +6,12 @@ categories: advertisement
 tags: [color grading, editing]
 image: rainiersquare.jpeg
 ---
-
+2023 Landing page video montage for the Residences at Rainier Square
+<br>
+Lead Editor: Deana Seitz
+<br>
+Colorist: Aster Teter
+<br>
 <style>
 .browser * {
   box-sizing: border-box;
@@ -73,15 +78,10 @@ image: rainiersquare.jpeg
 
 <div class="browser" url="https://liverainiersquare.com/">
     <div class="iframe-wrapper">
-      <iframe src="https://player.vimeo.com/progressive_redirect/playback/933746211/rendition/1080p/file.mp4?loc=external&signature=e0fc2aba09b45493d9d6eeef4697e39d9cdb532717b9c19484cfc8b64b6da0fa" frameborder="0">      
+      <iframe src="https://player.vimeo.com/progressive_redirect/playback/933746211/rendition/1080p/file.mp4?loc=external&signature=e0fc2aba09b45493d9d6eeef4697e39d9cdb532717b9c19484cfc8b64b6da0fa" frameborder="0" allowfullscreen>      
       </iframe>
     </div>
 </div>
 
-Working version? Your post content here...
 
-https://liverainiersquare.com/
-
-Lead Editor: Deana Seitz
-<br>
-Colorist: Aster Teter
+<a href="https://liverainiersquare.com/">Live Rainier Square</a>
