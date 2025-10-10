@@ -79,7 +79,7 @@ image: rainiersquare.jpeg
     </div>
 </div>
 
-2023 Landing page video montage for the Residences at Rainier Square
+<h3>Landing Page for the Residences at Rainier Square (2023) </h3>
 <br>
 Lead Editor: Deana Seitz | Colorist: Aster Teter
 <br>
