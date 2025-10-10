@@ -6,12 +6,6 @@ categories: advertisement
 tags: [color grading, editing]
 image: rainiersquare.jpeg
 ---
----
-layout: post
-title: "Your Post Title"
-date: YYYY-MM-DD HH:MM:SS
-categories: your-category
----
 
 <style>
 .browser * {
@@ -23,7 +17,7 @@ categories: your-category
   background: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0, 0, 0, 0.1);
   min-height: 500px;
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
