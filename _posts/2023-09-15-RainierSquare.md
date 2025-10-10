@@ -49,6 +49,9 @@ image: rainiersquare.jpeg
   background: #ffffff;
   height: 27px;
   box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+
 }
 
 .iframe-wrapper {
@@ -68,9 +71,9 @@ image: rainiersquare.jpeg
 }
 </style>
 
-<div class="browser" url="https://www.example.org/">
+<div class="browser" url="https://liverainiersquare.com/">
     <div class="iframe-wrapper">
-      <iframe src="https://www.example.org/" frameborder="0">      
+      <iframe src="https://player.vimeo.com/progressive_redirect/playback/933746211/rendition/1080p/file.mp4?loc=external&signature=e0fc2aba09b45493d9d6eeef4697e39d9cdb532717b9c19484cfc8b64b6da0fa" frameborder="0">      
       </iframe>
     </div>
 </div>
