@@ -79,8 +79,8 @@ image: rainiersquare.jpeg
     </div>
 </div>
 
-<h3>Landing Page for the Residences at Rainier Square (2023) </h3>
-<br>
+<h4>Landing Page for the Residences at Rainier Square (2023) </h4>
 Lead Editor: Deana Seitz | Colorist: Aster Teter
 <br>
 <a href="https://liverainiersquare.com/">Live Rainier Square</a>
+a
