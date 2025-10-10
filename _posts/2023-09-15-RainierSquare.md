@@ -6,9 +6,7 @@ categories: advertisement
 tags: [color grading, editing]
 image: rainiersquare.jpeg
 ---
-<h2> 2023 Landing page video montage for the Residences at Rainier Square </h2>
-<br>
-Lead Editor: Deana Seitz | Colorist: Aster Teter
+
 <br>
 <style>
 .browser * {
@@ -81,5 +79,8 @@ Lead Editor: Deana Seitz | Colorist: Aster Teter
     </div>
 </div>
 
-
+2023 Landing page video montage for the Residences at Rainier Square
+<br>
+Lead Editor: Deana Seitz | Colorist: Aster Teter
+<br>
 <a href="https://liverainiersquare.com/">Live Rainier Square</a>
