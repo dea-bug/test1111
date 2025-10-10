@@ -6,7 +6,7 @@ categories: advertisement
 tags: [color grading, editing]
 image: rainiersquare.jpeg
 ---
-test <br>
+
 <style>
 .browser * {
   box-sizing: border-box;
@@ -100,7 +100,14 @@ test <br>
   margin: 0 !important;
   padding: 0 !important;
 }
+</style>
 
+<div class="browser" url="https://www.example.org/">
+    <div class="iframe-wrapper">
+      <iframe src="https://www.example.org/" frameborder="0">      
+      </iframe>
+    </div>
+</div>
 
 Your post content here...
 
