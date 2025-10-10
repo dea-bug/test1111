@@ -6,11 +6,9 @@ categories: advertisement
 tags: [color grading, editing]
 image: rainiersquare.jpeg
 ---
-2023 Landing page video montage for the Residences at Rainier Square
+<h2> 2023 Landing page video montage for the Residences at Rainier Square </h2>
 <br>
-Lead Editor: Deana Seitz
-<br>
-Colorist: Aster Teter
+Lead Editor: Deana Seitz | Colorist: Aster Teter
 <br>
 <style>
 .browser * {
