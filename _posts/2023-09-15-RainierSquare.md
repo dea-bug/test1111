@@ -16,12 +16,12 @@ image: rainiersquare.jpeg
   position: relative;
   background: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 6px 10px rgba(0, 0, 0, 0.1);
-  min-height: 500px;
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  padding-top: 45px;
+  margin-bottom: 0;
+  border-radius: 5px; /* all corners */
+  padding-top: 45px; /* browser bar */
+  padding-bottom: 0;
   background-image: 
     radial-gradient(circle, #EB7061 6px, transparent 6px),
     radial-gradient(circle, #F5D160 6px, transparent 6px),
@@ -55,8 +55,12 @@ image: rainiersquare.jpeg
 .iframe-wrapper {
   position: relative;
   overflow: hidden;
-  padding-top: 56.25%;
-}
+  padding-top: 56.25%; /* adjust this if not 16:9*/
+  margin: 0;
+
+}  /* Remove any border radius from bottom if frame has rounded corners */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 
 .iframe-wrapper iframe {
   position: absolute;
@@ -65,6 +69,17 @@ image: rainiersquare.jpeg
   width: 100%;
   height: 100%;
   border: 0;
+  display: block;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset any potential body/html margins in the context */
+.browser .iframe-wrapper iframe body,
+.browser .iframe-wrapper iframe html {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 </style>
 
