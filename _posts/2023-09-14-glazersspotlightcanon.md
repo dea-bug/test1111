@@ -6,159 +6,139 @@ categories: documentary
 tags: [lifestyle, advertisement, documentary, editing, color grading, test 2 2023-04-23,]
 image: canon2.jpg
 ---
-<style>
-body {padding: 50px 0px;}
-* {transition: all 0.3s cubic-bezier(.25,.8,.25,1);}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearl Jam - Dark Matter World Tour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        .concert-ticket {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #000;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            font-family: 'Oswald', sans-serif;
+            overflow: hidden;
+        }
 
-.card {width: 100%; display: block; padding-top: 300px;
-transform-style: preserve-3d;
-}
+        /* Top Section with Images */
+        .ticket-images {
+            display: flex;
+            height: 200px;
+            border-bottom: 2px dashed #fff; /* Perforated ticket effect */
+        }
 
+        .image-container {
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+        }
 
-.dcard {position: relative; display: block;
- perspective: 500px;
-}
-.col-md-12, .col-md-4 {margin-bottom: 30px;}
+        .ticket-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%); /* Forces image to black and white */
+            transition: filter 0.5s ease;
+        }
 
-.col-md-12 .dcard {perspective: 3000px;}
+        .image-container:hover .ticket-img {
+            filter: grayscale(0%); /* Reveals original color on hover */
+        }
 
-.frame {background: rgba(0,0,0,0.6); display: block; width: 100%; height: 100%;     position: absolute;
-    top: 0;
-    left: 0;
-  
-  &:after {width: calc(100% - 40px); border: 2px dashed rgba(255,255,255,0.5); height: calc(100% - 40px); content: ""; display: block; 
-  left: 20px; top: 20px; position: absolute; transform: translateZ(30px);
-  }
-  
-}
+        /* Ticket Info Section */
+        .ticket-info {
+            padding: 25px;
+            text-align: center;
+        }
 
+        .band-name {
+            font-family: 'Anton', sans-serif;
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            margin: 0 0 10px 0;
+            line-height: 1;
+            text-transform: uppercase;
+        }
 
+        .tour-title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            color: #ccc;
+        }
 
-h2 {color: #fff; position: absolute; top: 50%; left: 50%; transform: translateY(-50%) translateX(-50%) translateZ(100px); text-align: center; 
+        .tour-details {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
 
-}
+        .detail-item {
+            margin: 10px 15px;
+        }
 
-.trigger {position: absolute; height: 33.333333%; width: 33.333333%; display: block; z-index: 2; 
+        .detail-item strong {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-  &:nth-child(1){  left: 0%; top: 0%;
-    &:hover ~ .card {transform: rotateY(8deg) rotateX(-5deg);}
-   }
-  &:nth-child(2){  left: 33.333333%; top: 0%;
-    &:hover ~ .card {transform: rotateY(0deg) rotateX(-5deg);;}
-   }
-  &:nth-child(3){  left: 66.666666%; top: 0%;
-    &:hover ~ .card {transform: rotateY(-8deg) rotateX(-5deg);}
-   }
-  &:nth-child(4){  left: 0%; top: 33.333333%;
-    &:hover ~ .card {transform: rotateY(8deg);}
-   }
-  &:nth-child(5){  left: 33.333333%; top: 33.333333%;
-    &:hover ~ .card {transform: rotateY(0deg) rotateX(0deg);}
-   }
-  &:nth-child(6){  left: 66.666666%; top: 33.333333%;
-    &:hover ~ .card {transform: rotateY(-8deg) rotateX(0deg);}
-   }
-  &:nth-child(7){  left: 0%; top: 66.666666%;
-    &:hover ~ .card {transform: rotateY(8deg) rotateX(5deg);}
-   }
-  &:nth-child(8){  left: 33.333333%; top: 66.666666%;
-    &:hover ~ .card {transform: rotateY(0deg) rotateX(5deg);}
-   }
-  &:nth-child(9){  left: 66.666666%; top: 66.666666%;
-    &:hover ~ .card {transform: rotateY(-8deg) rotateX(5deg);}
-   }
-}
-
-
-
-</style>
-<div class="container">
-<div class="row">
-  
-  <div class="col-md-4">
-    <div class="dcard">
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    
-<div class="card" style="background: url(https://www.norfolk.gov.uk/-/media/norfolk/images/out-and-about/norfolk-trails/coastal-treasures/brancaster.jpg?la=en&hash=99976B7A3B226E6AE819811C426DAF67BDD411A4); background-size: cover;">
-  <div class="frame">
-    <h2>3D Hover effect</h2>
-  </div>
-</div>
+        .detail-item span {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="concert-ticket">
+        <div class="ticket-images">
+            <div class="image-container">
+                <img src="https://downloads.pearljam.com/img/hero-hero/1747965128cfb5905236e77afb979d74d17e222534.png" alt="Pearl Jam Performing" class="ticket-img">
+            </div>
+            <div class="image-container">
+                <img src="https://downloads.pearljam.com/assets/img/2024/random-image/bg-4.jpg" alt="Dark Matter Album Art" class="ticket-img">
+            </div>
+          <div class="image-container">
+                <img src="https://downloads.pearljam.com/assets/img/2024/random-image/bg-4.jpg" alt="Dark Matter Album Art" class="ticket-img">
+            </div>
+            <div class="image-container">
+                <img src="https://downloads.pearljam.com/assets/img/2024/random-image/bg-6.jpg" alt="Concert Crowd" class="ticket-img">
+            </div>
+        </div>
+        <div class="ticket-info">
+            <h1 class="band-name">Pearl Jam: Dark Matter World Tour 2024</h1>
+            <p class="tour-title"></p>
+            <div class="tour-details">
+                <div class="detail-item">
+                    <strong>Years</strong>
+                    <span>2024 - 2025</span>
+                </div>
+                <div class="detail-item">
+                    <strong>Shows</strong>
+                    <span>48</span>
+                </div>
+              
+            </div>
+        </div>
     </div>
-   </div>
-  
-  <div class="col-md-4">
-    <div class="dcard">
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    
-<div class="card" style="background: url(https://www.norfolk.gov.uk/-/media/norfolk/images/out-and-about/norfolk-trails/coastal-treasures/the-burnhams.jpg?la=en&hash=70148BE1FF507B4DE4D8516D3C40DC42764CDE62); background-size: cover;">
-  <div class="frame">
-    <h2>Using CSS only</h2>
-  </div>
-</div>
-    </div>
-   </div>
-  
-  <div class="col-md-4">
-    <div class="dcard">
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    
-<div class="card" style="background: url(https://www.norfolk.gov.uk/-/media/norfolk/images/out-and-about/norfolk-trails/coastal-treasures/ken-hill.jpg?la=en&hash=87D1B9A205EE0CA54B59966B8D5A198B19BA95C7); background-size: cover;">
-  <div class="frame">
-    <h2>No JS</h2>
-  </div>
-</div>
-    </div>
-   </div>
-  
-  
-   <div class="col-md-12">
-    <div class="dcard">
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    <div class="trigger"></div>
-    
-<div class="card" style="background: url(https://www.norfolk.gov.uk:443/-/media/norfolk/images/out-and-about/norfolk-trails/coastal-treasures/coastal-treasures-1500-662.jpg); background-size: cover;">
-  <div class="frame">
-    <h2>3D Hover effect</h2>
-  </div>
-</div>
-    </div>
-   </div>
-  
-  
-  
-  
-  
-  </div>
-</div>
+</body>
+</html>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Oi2GmQjwhX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Lead Editor: Deana Seitz
+
+<>
