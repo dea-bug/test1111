@@ -60,7 +60,7 @@ image: pjdm-header.jpg
 
 .pj-title-line {
     display: block;
-    font-size: clamp(2rem, 3vw, 3rem); /* Responsive font size */
+    font-size: clamp(2rem, 2.5vw, 2.5rem); /* Responsive font size */
     letter-spacing: -2px;
     line-height: 1;
     margin-bottom: 5px;
@@ -100,7 +100,6 @@ image: pjdm-header.jpg
     .pj-title-container {
         bottom: 15px;
         left: 15px;
-        width: 75%; /* Slightly wider on mobile */
     }
     
     .pj-title-line {
