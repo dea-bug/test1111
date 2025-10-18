@@ -8,7 +8,7 @@ image: pjdm-header.jpg
 ---
 <div class="pj-header-container">
     <div class="pj-image-wrapper">
-        <img src="[your-image-url]" alt="Concert header">
+        <img src="https://joybirdstudios.com/assets/img/darkmatter-header.jpg" alt="Concert header">
         <div class="pj-title-container">
             <span class="pj-title-line">Pearl Jam: Dark Matter</span>
             <span class="pj-title-line">World Tour 2024</span>
