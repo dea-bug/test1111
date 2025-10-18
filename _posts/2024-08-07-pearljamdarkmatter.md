@@ -8,7 +8,7 @@ image: pjdm-header.jpg
 ---
 <div class="pj-header-container">
     <div class="pj-image-wrapper">
-        <img src="https://joybirdstudios.com/assets/img/darkmatter-header.jpg" alt="pearl jam ticket mockup header">
+        <img src="[your-image-url]" alt="Concert header">
         <div class="pj-title-container">
             <span class="pj-title-line">Pearl Jam: Dark Matter</span>
             <span class="pj-title-line">World Tour 2024</span>
@@ -60,14 +60,13 @@ image: pjdm-header.jpg
 
 .pj-title-line {
     display: block;
-    font-size: clamp(1.5rem, 4vw, 4rem); /* Smaller, more appropriate font sizes */
-    letter-spacing: 1px; /* Better spacing */
-    line-height: 1.1;
+    font-size: clamp(2rem, 6vw, 6rem); /* Responsive font size */
+    letter-spacing: -2px;
+    line-height: 1;
     margin-bottom: 5px;
     opacity: 0;
     transform: translateY(80%);
     animation: pj-lineUp 3s ease-out forwards;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Better readability */
 }
 
 .pj-title-line:nth-child(1) {
@@ -106,7 +105,6 @@ image: pjdm-header.jpg
     
     .pj-title-line {
         margin-bottom: 3px;
-        font-size: clamp(1.2rem, 3.5vw, 3rem); /* Even smaller on mobile */
     }
 }
 
@@ -116,12 +114,9 @@ image: pjdm-header.jpg
         left: 10px;
         width: 80%;
     }
-    
-    .pj-title-line {
-        font-size: clamp(1rem, 3vw, 2.5rem);
-    }
 }
 </style>
+
 <br>
 photos + BTS by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter-tour/4/thumbs" target="_blank">
   Rob Sheridan
