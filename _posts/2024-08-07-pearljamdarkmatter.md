@@ -50,7 +50,7 @@ image: pjdm-header.jpg
     position: absolute;
     bottom: 20px;
     left: 30px;
-    width: 65%; /* Limit to 65% of image width */
+    width: 75%; /* Limit to 65% of image width */
     max-width: 975px; /* 65% of 1500px */
     font-family: 'Anton', sans-serif;
     color: white;
