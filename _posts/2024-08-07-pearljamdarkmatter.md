@@ -48,19 +48,19 @@ image: pjdm-header.jpg
 
 .pj-title-container {
     position: absolute;
-    bottom: 30px;
-    left: 40px;
+    bottom: 20px;
+    left: 30px;
     width: 65%; /* Limit to 65% of image width */
     max-width: 975px; /* 65% of 1500px */
     font-family: 'Anton', sans-serif;
     color: white;
     text-transform: uppercase;
-    overflow: hidden;
+    overflow: nowrap;
 }
 
 .pj-title-line {
     display: block;
-    font-size: clamp(2rem, 6vw, 6rem); /* Responsive font size */
+    font-size: clamp(2rem, 3vw, 3rem); /* Responsive font size */
     letter-spacing: -2px;
     line-height: 1;
     margin-bottom: 5px;
