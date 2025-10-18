@@ -55,7 +55,7 @@ image: pjdm-header.jpg
     font-family: 'Anton', sans-serif;
     color: white;
     text-transform: uppercase;
-    overflow: nowrap;
+    overflow: hidden;
 }
 
 .pj-title-line {
