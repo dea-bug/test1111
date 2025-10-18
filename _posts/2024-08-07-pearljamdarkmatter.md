@@ -6,6 +6,137 @@ categories: music videos
 tags: [music videos, color grading, editing, visuals]
 image: pjdm-header.jpg
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 1500px;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+        }
+        
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 33.33%; /* 500/1500 = 1/3 aspect ratio */
+            background-color: #222;
+        }
+        
+        .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .title-container {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            width: 65%; /* Limit to 65% of image width */
+            max-width: 975px; /* 65% of 1500px */
+            font-family: 'Anton', sans-serif;
+            color: white;
+            text-transform: uppercase;
+            overflow: hidden;
+         
+          
+        }
+        
+        .title-line {
+            display: block;
+            font-size: clamp(2rem, 6vw, 6rem); /* Responsive font size */
+            letter-spacing: -2px;
+            line-height: 1;
+            margin-bottom: 5px;
+            opacity: 0;
+            transform: translateY(80%);
+            animation: lineUp 3s ease-out forwards;
+        }
+        
+        .title-line:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        
+        .title-line:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        
+        @keyframes lineUp {
+            0% {
+                opacity: 0;
+                transform: translateY(80%);
+            }
+            20% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .title-container {
+                bottom: 15px;
+                left: 15px;
+                width: 75%; /* Slightly wider on mobile */
+
+            }
+            
+            .title-line {
+                margin-bottom: 3px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .title-container {
+                bottom: 10px;
+                left: 10px;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-wrapper">
+            <!-- Using a placeholder image with the correct dimensions -->
+            <img src="https://joybirdstudios.com/assets/img/darkmatter-header.jpg" alt="Concert header">
+            <div class="title-container">
+                <span class="title-line">Pearl Jam: Dark Matter</span>
+                <span class="title-line">World Tour 2024</span>
+            </div>
+        </div>
+    </div>
 <br>
 <h4>photos + BTS by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter-tour/4/thumbs" target="_blank">
   Rob Sheridan</h4>
