@@ -20,7 +20,7 @@ Lead Editor: Deana Seitz
 ul.slides {
     display: block;
     position: relative;
-    height: 600px;
+    height: 362px;px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -112,8 +112,8 @@ ul.slides input {
 
 .carousel-dots .carousel-dot {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background-color: #fff;
     opacity: 0.5;
