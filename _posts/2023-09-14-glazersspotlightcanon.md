@@ -12,10 +12,11 @@ image: canon2.jpg
 Lead Editor: Deana Seitz
 
 <br>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Image Gallery</title>
     <style>
         /* Import fonts */
@@ -26,10 +27,11 @@ Lead Editor: Deana Seitz
             --gallery-primary-color: #fff;
             --gallery-secondary-color: rgba(0, 0, 0, 0.9);
             --gallery-transition-duration: 0.5s;
+            margin-bottom: 40px; /* Added space to prevent footer wrapping */
         }
         
         .gallery-container .col4 {
-            width: 33.33333333%;
+            width: 25%; /* Changed from 33.33% to 25% for 4 images */
             float: left;
             position: relative;
         }
@@ -39,14 +41,18 @@ Lead Editor: Deana Seitz
         }
 
         .gallery-container .container {
-            width: 70%;
+            width: 90%; /* Increased from 70% to 90% for larger container */
             margin: 0 auto;
+            overflow: hidden; /* Clear float */
         }
 
         .gallery-container .fx2 .item {
-            margin: 10px 0;
+            margin: 10px;
             padding: 0;
             cursor: pointer;
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .gallery-container .fx2 .item img {
@@ -54,6 +60,7 @@ Lead Editor: Deana Seitz
             display: block;
             max-width: 100%;
             height: auto;
+            width: 100%;
         }
 
         .gallery-container .fx2 .image-link:hover .item img,
@@ -81,6 +88,7 @@ Lead Editor: Deana Seitz
             text-align: center;
             filter: blur(5px);
             opacity: 0;
+            pointer-events: none;
         }
 
         .gallery-container .fx2 .image-link:hover .item h4,
@@ -102,6 +110,7 @@ Lead Editor: Deana Seitz
             margin: 0 auto;
             text-align: center;
             opacity: 0;
+            pointer-events: none;
         }
 
         .gallery-container .fx2 .image-link:hover .item p,
@@ -125,6 +134,8 @@ Lead Editor: Deana Seitz
             transition: all 0.3s ease;
             z-index: 1000;
             pointer-events: none;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         .gallery-container .modal:target {
@@ -162,15 +173,16 @@ Lead Editor: Deana Seitz
             max-height: 80vh;
             height: auto;
             display: block;
+            margin: 0 auto;
         }
 
-        /* Animated Close Button */
+        /* Animated Close Button - Improved positioning */
         .gallery-container .close-button {
             height: 50px;
             width: 50px;
-            position: absolute;
-            top: -60px;
-            right: -60px;
+            position: fixed; /* Changed from absolute to fixed for better mobile positioning */
+            top: 20px;
+            right: 20px;
             box-sizing: border-box;
             line-height: 50px;
             display: inline-block;
@@ -221,8 +233,17 @@ Lead Editor: Deana Seitz
                 width: 50%;
             }
             .gallery-container .close-button {
-                right: 0;
-                top: -70px;
+                right: 20px;
+                top: 20px;
+            }
+            
+            /* Prevent zoom on mobile */
+            .gallery-container .modal {
+                touch-action: manipulation;
+            }
+            
+            .gallery-container .modal-content {
+                max-width: 95%;
             }
         }
 
@@ -231,11 +252,11 @@ Lead Editor: Deana Seitz
                 width: 100%;
             }
             .gallery-container .modal-content {
-                max-width: 95%;
+                max-width: 98%;
             }
             .gallery-container .close-button {
-                right: 0;
-                top: -60px;
+                right: 15px;
+                top: 15px;
                 height: 40px;
                 width: 40px;
             }
@@ -246,6 +267,11 @@ Lead Editor: Deana Seitz
                 margin-left: -12px;
                 height: 3px;
                 width: 24px;
+            }
+            
+            /* Ensure content fits on mobile */
+            .gallery-container .modal-image {
+                max-height: 70vh;
             }
         }
     </style>
@@ -259,8 +285,8 @@ Lead Editor: Deana Seitz
                 <a href="#image1" class="image-link">
                     <div class="item col4">
                         <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg">
-                        <h4>title image</h4>
-                        <p>Description</p>
+                        <h4>Mountain View</h4>
+                        <p>Beautiful mountain landscape</p>
                     </div>
                 </a>
                 
@@ -268,8 +294,8 @@ Lead Editor: Deana Seitz
                 <a href="#image2" class="image-link">
                     <div class="item col4">
                         <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg">
-                        <h4>title image</h4>
-                        <p>Description</p>
+                        <h4>Forest Path</h4>
+                        <p>Serene forest trail</p>
                     </div>
                 </a>
                 
@@ -277,8 +303,17 @@ Lead Editor: Deana Seitz
                 <a href="#image3" class="image-link">
                     <div class="item col4">
                         <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg">
-                        <h4>title image</h4>
-                        <p>Description</p>
+                        <h4>Ocean Sunset</h4>
+                        <p>Stunning ocean view</p>
+                    </div>
+                </a>
+                
+                <!-- Image 4 -->
+                <a href="#image4" class="image-link">
+                    <div class="item col4">
+                        <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg">
+                        <h4>City Lights</h4>
+                        <p>Urban nightscape</p>
                     </div>
                 </a>
             </div> 
@@ -308,10 +343,22 @@ Lead Editor: Deana Seitz
                 <a href="#" class="close-button"></a>
             </div>
         </div>
+        
+        <div class="modal" id="image4">
+            <a href="#" class="modal-close"></a>
+            <div class="modal-content">
+                <img src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" class="modal-image">
+                <a href="#" class="close-button"></a>
+            </div>
+        </div>
 
         <!-- Fallback for closing -->
         <div id="close"></div>
     </div>
+    
+    <!-- Sample footer to demonstrate no wrapping -->
+    <footer style="background: #333; color: white; padding: 20px; text-align: center;">
+        <p>This is your blog footer - it should not wrap around the gallery</p>
+    </footer>
 </body>
 </html>
-<br>
