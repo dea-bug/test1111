@@ -11,6 +11,162 @@ image: pjdm-header.jpg
 no body text, image slider not centered and images are stretching, no option to add one image, mobile version needs scale locked
 **
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isolated Carousel</title>
+    <style>
+        /* Reset and isolate the carousel container */
+        #isolated-carousel {
+            all: initial;
+            display: block;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            position: relative;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Scoped carousel styles that won't be affected by external CSS */
+        #isolated-carousel .carousel-slides {
+            all: initial;
+            display: block;
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+
+        #isolated-carousel .carousel-slide {
+            all: initial;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            box-sizing: border-box;
+        }
+
+        #isolated-carousel .carousel-slide.active {
+            opacity: 1;
+        }
+
+        #isolated-carousel .carousel-slide img {
+            all: initial;
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            box-sizing: border-box;
+        }
+
+        #isolated-carousel .carousel-arrow {
+            all: initial;
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+            z-index: 10;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        #isolated-carousel .carousel-arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #isolated-carousel .carousel-arrow.prev {
+            left: 15px;
+        }
+
+        #isolated-carousel .carousel-arrow.next {
+            right: 15px;
+        }
+
+        #isolated-carousel .carousel-dots {
+            all: initial;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+
+        #isolated-carousel .carousel-dot {
+            all: initial;
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        #isolated-carousel .carousel-dot.active {
+            background-color: #333;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            #isolated-carousel .carousel-slides {
+                height: 350px;
+            }
+            
+            #isolated-carousel .carousel-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #isolated-carousel .carousel-slides {
+                height: 250px;
+            }
+            
+            #isolated-carousel .carousel-arrow {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            
+            #isolated-carousel .carousel-dot {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
 <div class="pj-header-container">
     <div class="pj-image-wrapper">
         <img src="https://joybirdstudios.com/assets/img/darkmatter-header.jpg" alt="Concert header">
@@ -120,7 +276,50 @@ no body text, image slider not centered and images are stretching, no option to 
     }
 }
 </style>
-
+<br>
+<div style="padding: 20px; background: #f0f0f0;">
+        <h1>Your Blog Post Title</h1>
+        <p>This is your regular blog content. The carousel below is completely isolated from your site's CSS.</p>
+        
+        <!-- Isolated Carousel -->
+        <div id="isolated-carousel">
+            <div class="carousel-slides">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active">
+                    <img src="https://images.pexels.com/photos/1643409/pexels-photo-1643409.jpeg" alt="Image 1">
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                    <img src="https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg" alt="Image 2">
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                    <img src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg" alt="Image 3">
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="carousel-slide">
+                    <img src="https://images.pexels.com/photos/33109/popcorn-movie-party-entertainment.jpg" alt="Image 4">
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button class="carousel-arrow prev">&#10094;</button>
+                <button class="carousel-arrow next">&#10095;</button>
+            </div>
+            
+            <!-- Dots Indicator -->
+            <div class="carousel-dots">
+                <span class="carousel-dot active" data-index="0"></span>
+                <span class="carousel-dot" data-index="1"></span>
+                <span class="carousel-dot" data-index="2"></span>
+                <span class="carousel-dot" data-index="3"></span>
+            </div>
+        </div>
+        
+        <p>More of your blog content continues here...</p>
+    </div>
 <br>
 photos + BTS by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter-tour/4/thumbs" target="_blank">
   Rob Sheridan
@@ -130,26 +329,35 @@ photos + BTS by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isolated Carousel</title>
     <style>
-        /* Carousel Container */
-        .carousel-container {
+        /* Reset and isolate the carousel container */
+        #isolated-carousel {
+            all: initial;
+            display: block;
             max-width: 900px;
-            margin: 0 auto;
+            margin: 20px auto;
             padding: 20px;
             position: relative;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
-        /* Carousel Slides */
-        .carousel-slides {
+        /* Scoped carousel styles that won't be affected by external CSS */
+        #isolated-carousel .carousel-slides {
+            all: initial;
+            display: block;
             position: relative;
             height: 500px;
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
         }
 
-        /* Individual Slide */
-        .carousel-slide {
+        #isolated-carousel .carousel-slide {
+            all: initial;
+            display: block;
             position: absolute;
             top: 0;
             left: 0;
@@ -160,29 +368,32 @@ photos + BTS by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: black;
+            background-color: #f5f5f5;
+            box-sizing: border-box;
         }
 
-        .carousel-slide.active {
+        #isolated-carousel .carousel-slide.active {
             opacity: 1;
         }
 
-        /* Slide Image */
-        .carousel-slide img {
+        #isolated-carousel .carousel-slide img {
+            all: initial;
+            display: block;
             max-width: 100%;
             max-height: 100%;
             width: auto;
             height: auto;
             object-fit: contain;
-            display: block;
+            box-sizing: border-box;
         }
 
-        /* Navigation Arrows */
-        .carousel-arrow {
+        #isolated-carousel .carousel-arrow {
+            all: initial;
+            display: block;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background-color: black;
+            background-color: rgba(0, 0, 0, 0.5);
             color: white;
             border: none;
             width: 50px;
@@ -193,50 +404,56 @@ photos + BTS by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background-color 2.5s;
+            transition: background-color 0.3s;
             z-index: 10;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
-        .carousel-arrow:hover {
-            background-color: grey;
+        #isolated-carousel .carousel-arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
-        .carousel-arrow.prev {
+        #isolated-carousel .carousel-arrow.prev {
             left: 15px;
         }
 
-        .carousel-arrow.next {
+        #isolated-carousel .carousel-arrow.next {
             right: 15px;
         }
 
-        /* Dots Indicator */
-        .carousel-dots {
+        #isolated-carousel .carousel-dots {
+            all: initial;
             display: flex;
             justify-content: center;
             margin-top: 20px;
             gap: 10px;
+            box-sizing: border-box;
         }
 
-        .carousel-dot {
+        #isolated-carousel .carousel-dot {
+            all: initial;
+            display: block;
             width: 12px;
             height: 12px;
             border-radius: 50%;
             background-color: #ccc;
             cursor: pointer;
             transition: background-color 0.3s;
+            box-sizing: border-box;
         }
 
-        .carousel-dot.active {
+        #isolated-carousel .carousel-dot.active {
             background-color: #333;
         }
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .carousel-slides {
+            #isolated-carousel .carousel-slides {
                 height: 350px;
             }
             
-            .carousel-arrow {
+            #isolated-carousel .carousel-arrow {
                 width: 40px;
                 height: 40px;
                 font-size: 20px;
@@ -244,161 +461,23 @@ photos + BTS by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter
         }
 
         @media (max-width: 480px) {
-            .carousel-slides {
+            #isolated-carousel .carousel-slides {
                 height: 250px;
             }
             
-            .carousel-arrow {
+            #isolated-carousel .carousel-arrow {
                 width: 35px;
                 height: 35px;
                 font-size: 18px;
             }
             
-            .carousel-dot {
+            #isolated-carousel .carousel-dot {
                 width: 10px;
                 height: 10px;
             }
         }
     </style>
 </head>
-<body>
-    <div class="carousel-container">
-        <div class="carousel-slides">
-            <!-- Slide 1 -->
-            <div class="carousel-slide active">
-                <img src="https://images.pexels.com/photos/1643409/pexels-photo-1643409.jpeg" alt="Image 1">
-            </div>
-            
-            <!-- Slide 2 -->
-            <div class="carousel-slide">
-                <img src="https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg" alt="Image 2">
-            </div>
-            
-            <!-- Slide 3 -->
-            <div class="carousel-slide">
-                <img src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg" alt="Image 3">
-            </div>
-            
-            <!-- Slide 4 -->
-            <div class="carousel-slide">
-                <img src="https://images.pexels.com/photos/33109/popcorn-movie-party-entertainment.jpg" alt="Image 4">
-            </div>
-            
-            <!-- Navigation Arrows -->
-            <button class="carousel-arrow prev">&#10094;</button>
-            <button class="carousel-arrow next">&#10095;</button>
-        </div>
-        
-        <!-- Dots Indicator -->
-        <div class="carousel-dots">
-            <span class="carousel-dot active" data-index="0"></span>
-            <span class="carousel-dot" data-index="1"></span>
-            <span class="carousel-dot" data-index="2"></span>
-            <span class="carousel-dot" data-index="3"></span>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get all elements
-            const slides = document.querySelectorAll('.carousel-slide');
-            const dots = document.querySelectorAll('.carousel-dot');
-            const prevBtn = document.querySelector('.carousel-arrow.prev');
-            const nextBtn = document.querySelector('.carousel-arrow.next');
-            
-            let currentSlide = 0;
-            const totalSlides = slides.length;
-            
-            // Function to show a specific slide
-            function showSlide(index) {
-                // Hide all slides
-                slides.forEach(slide => {
-                    slide.classList.remove('active');
-                });
-                
-                // Remove active class from all dots
-                dots.forEach(dot => {
-                    dot.classList.remove('active');
-                });
-                
-                // Show the selected slide
-                slides[index].classList.add('active');
-                dots[index].classList.add('active');
-                
-                currentSlide = index;
-            }
-            
-            // Next slide function
-            function nextSlide() {
-                let nextIndex = currentSlide + 1;
-                if (nextIndex >= totalSlides) {
-                    nextIndex = 0;
-                }
-                showSlide(nextIndex);
-            }
-            
-            // Previous slide function
-            function prevSlide() {
-                let prevIndex = currentSlide - 1;
-                if (prevIndex < 0) {
-                    prevIndex = totalSlides - 1;
-                }
-                showSlide(prevIndex);
-            }
-            
-            // Event listeners for arrows
-            nextBtn.addEventListener('click', nextSlide);
-            prevBtn.addEventListener('click', prevSlide);
-            
-            // Event listeners for dots
-            dots.forEach(dot => {
-                dot.addEventListener('click', function() {
-                    const slideIndex = parseInt(this.getAttribute('data-index'));
-                    showSlide(slideIndex);
-                });
-            });
-            
-            // Auto-advance slides (optional)
-            let slideInterval = setInterval(nextSlide, 5000);
-            
-            // Pause auto-advance on hover
-            const carousel = document.querySelector('.carousel-slides');
-            carousel.addEventListener('mouseenter', () => {
-                clearInterval(slideInterval);
-            });
-            
-            carousel.addEventListener('mouseleave', () => {
-                slideInterval = setInterval(nextSlide, 5000);
-            });
-            
-            // Touch swipe support for mobile
-            let startX = 0;
-            let endX = 0;
-            
-            carousel.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-            });
-            
-            carousel.addEventListener('touchend', (e) => {
-                endX = e.changedTouches[0].clientX;
-                handleSwipe();
-            });
-            
-            function handleSwipe() {
-                const swipeThreshold = 50;
-                
-                if (startX - endX > swipeThreshold) {
-                    // Swipe left - next slide
-                    nextSlide();
-                } else if (endX - startX > swipeThreshold) {
-                    // Swipe right - previous slide
-                    prevSlide();
-                }
-            }
-        });
-    </script>
-</body>
-</html>
 <br>
 
 <a href="https://pearljam.com/news/dark-matter-world-tour-2024" target="_blank">
@@ -419,3 +498,98 @@ Check out this BTS video for a peak at some of the visuals we created!
 <script async src="//www.instagram.com/embed.js"></script>
 <br>
 </center>
+
+
+    <script>
+        // Isolated JavaScript for the carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('isolated-carousel');
+            
+            // Get all elements within the isolated container
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dots = carousel.querySelectorAll('.carousel-dot');
+            const prevBtn = carousel.querySelector('.carousel-arrow.prev');
+            const nextBtn = carousel.querySelector('.carousel-arrow.next');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            function showSlide(index) {
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                
+                currentSlide = index;
+            }
+            
+            function nextSlide() {
+                let nextIndex = currentSlide + 1;
+                if (nextIndex >= totalSlides) {
+                    nextIndex = 0;
+                }
+                showSlide(nextIndex);
+            }
+            
+            function prevSlide() {
+                let prevIndex = currentSlide - 1;
+                if (prevIndex < 0) {
+                    prevIndex = totalSlides - 1;
+                }
+                showSlide(prevIndex);
+            }
+            
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const slideIndex = parseInt(this.getAttribute('data-index'));
+                    showSlide(slideIndex);
+                });
+            });
+            
+            // Auto-advance slides
+            let slideInterval = setInterval(nextSlide, 5000);
+            
+            const carouselSlides = carousel.querySelector('.carousel-slides');
+            carouselSlides.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            carouselSlides.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+            
+            // Touch swipe support
+            let startX = 0;
+            let endX = 0;
+            
+            carouselSlides.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            carouselSlides.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                
+                if (startX - endX > swipeThreshold) {
+                    nextSlide();
+                } else if (endX - startX > swipeThreshold) {
+                    prevSlide();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
