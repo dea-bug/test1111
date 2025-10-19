@@ -125,197 +125,282 @@ no body text, image slider not centered and images are stretching, no option to 
 photos + BTS by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter-tour/4/thumbs" target="_blank">
   Rob Sheridan
 
-   <center>
-<style>
-.carousel {
-    margin-left: 15%;
-    margin-right: 15%;
-}
 
-ul.slides {
-    display: block;
-    position: relative;
-    height: 362px;
-      width: 600px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    list-style: none;
-}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Carousel Container */
+        .carousel-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
 
-.slides * {
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-}
+        /* Carousel Slides */
+        .carousel-slides {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
 
-ul.slides input {
-    display: none; 
-}
+        /* Individual Slide */
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
 
+        .carousel-slide.active {
+            opacity: 1;
+        }
 
-.slide-container { 
-    display: block; 
-}
+        /* Slide Image */
+        .carousel-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
 
-.slide-image {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    opacity: 0;
-    transition: all .7s ease-in-out;
-}   
+        /* Navigation Arrows */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: black;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 2.5s;
+            z-index: 10;
+        }
 
-.slide-image img {
-    width: auto;
-    min-width: 100%;
-    height: 100%;
-}
+        .carousel-arrow:hover {
+            background-color: grey;
+        }
 
-.carousel-controls {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    font-size: 50px;
-    line-height: 373px;
-    color: #fff;
-}
+        .carousel-arrow.prev {
+            left: 15px;
+        }
 
-.carousel-controls label {
-    display: none;
-    position: absolute;
-    padding: 0 20px;
-    opacity: 0;
-    transition: opacity .2s;
-    cursor: pointer;
-}
+        .carousel-arrow.next {
+            right: 15px;
+        }
 
-.slide-image:hover + .carousel-controls label{
-    opacity: 0.5;
-}
+        /* Dots Indicator */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
 
-.carousel-controls label:hover {
-    opacity: 1;
-}
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-.carousel-controls .prev-slide {
-    width: 49%;
-    text-align: left;
-    left: 0;
-}
+        .carousel-dot.active {
+            background-color: #333;
+        }
 
-.carousel-controls .next-slide {
-    width: 49%;
-    text-align: right;
-    right: 0;
-}
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .carousel-slides {
+                height: 350px;
+            }
+            
+            .carousel-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
 
-.carousel-dots {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px;
-    z-index: 999;
-    text-align: center;
-}
-
-.carousel-dots .carousel-dot {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.5;
-    margin: 10px;
-}
-
-input:checked + .slide-container .slide-image {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 1s ease-in-out;
-max-width: auto;
-}
-
-input:checked + .slide-container .carousel-controls label {
-     display: block; 
-}
-
-input#img-1:checked ~ .carousel-dots label#img-dot-1,
-input#img-2:checked ~ .carousel-dots label#img-dot-2,
-input#img-3:checked ~ .carousel-dots label#img-dot-3,
-input#img-4:checked ~ .carousel-dots label#img-dot-4,
-input#img-5:checked ~ .carousel-dots label#img-dot-5,
-input#img-6:checked ~ .carousel-dots label#img-dot-6 {
-	opacity: 1;
-}
-
-
-input:checked + .slide-container .nav label { display: block; }
-
-</style>
-
-<div>
-  <div class="carousel">
-    <ul class="slides">
-      <input type="radio" name="radio-buttons" id="img-1" checked />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="https://joybirdstudios.com/assets/img/Climate-Pledge-Rehearsals.jpg">
+        @media (max-width: 480px) {
+            .carousel-slides {
+                height: 250px;
+            }
+            
+            .carousel-arrow {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            
+            .carousel-dot {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-slides">
+            <!-- Slide 1 -->
+            <div class="carousel-slide active">
+                <img src="https://images.pexels.com/photos/1643409/pexels-photo-1643409.jpeg" alt="Image 1">
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+                <img src="https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg" alt="Image 2">
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+                <img src="https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg" alt="Image 3">
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="carousel-slide">
+                <img src="https://images.pexels.com/photos/33109/popcorn-movie-party-entertainment.jpg" alt="Image 4">
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <button class="carousel-arrow prev">&#10094;</button>
+            <button class="carousel-arrow next">&#10095;</button>
         </div>
-        <div class="carousel-controls">
-          <label for="img-3" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-2" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
+        
+        <!-- Dots Indicator -->
+        <div class="carousel-dots">
+            <span class="carousel-dot active" data-index="0"></span>
+            <span class="carousel-dot" data-index="1"></span>
+            <span class="carousel-dot" data-index="2"></span>
+            <span class="carousel-dot" data-index="3"></span>
         </div>
-      </li>
-      <input type="radio" name="radio-buttons" id="img-2" />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="https://joybirdstudios.com/assets/img/ClimatePledgeRehearsals3.jpg">
-        </div>
-        <div class="carousel-controls">
-          <label for="img-1" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-3" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
-        </div>
-      </li>
-      <input type="radio" name="radio-buttons" id="img-3" />
-      <li class="slide-container">
-        <div class="slide-image">
-          <img src="https://joybirdstudios.com/assets/img/ClimatePledgeRehearsals2 .jpg">
-        </div>
-        <div class="carousel-controls">
-          <label for="img-2" class="prev-slide">
-            <span>&lsaquo;</span>
-          </label>
-          <label for="img-1" class="next-slide">
-            <span>&rsaquo;</span>
-          </label>
-        </div>
-      </li>
-      <div class="carousel-dots">
-        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
-      </div>
-    </ul>
-  </div>
-</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all elements
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const prevBtn = document.querySelector('.carousel-arrow.prev');
+            const nextBtn = document.querySelector('.carousel-arrow.next');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // Function to show a specific slide
+            function showSlide(index) {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                // Remove active class from all dots
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                
+                // Show the selected slide
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                
+                currentSlide = index;
+            }
+            
+            // Next slide function
+            function nextSlide() {
+                let nextIndex = currentSlide + 1;
+                if (nextIndex >= totalSlides) {
+                    nextIndex = 0;
+                }
+                showSlide(nextIndex);
+            }
+            
+            // Previous slide function
+            function prevSlide() {
+                let prevIndex = currentSlide - 1;
+                if (prevIndex < 0) {
+                    prevIndex = totalSlides - 1;
+                }
+                showSlide(prevIndex);
+            }
+            
+            // Event listeners for arrows
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Event listeners for dots
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const slideIndex = parseInt(this.getAttribute('data-index'));
+                    showSlide(slideIndex);
+                });
+            });
+            
+            // Auto-advance slides (optional)
+            let slideInterval = setInterval(nextSlide, 5000);
+            
+            // Pause auto-advance on hover
+            const carousel = document.querySelector('.carousel-slides');
+            carousel.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            carousel.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+            
+            // Touch swipe support for mobile
+            let startX = 0;
+            let endX = 0;
+            
+            carousel.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            carousel.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                
+                if (startX - endX > swipeThreshold) {
+                    // Swipe left - next slide
+                    nextSlide();
+                } else if (endX - startX > swipeThreshold) {
+                    // Swipe right - previous slide
+                    prevSlide();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
 <br>
-</center>
+
 <a href="https://pearljam.com/news/dark-matter-world-tour-2024" target="_blank">
   Pearl Jam Dark Matter World Tour 2024
 </a>
