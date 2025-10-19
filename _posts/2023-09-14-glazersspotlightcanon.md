@@ -12,7 +12,7 @@ image: canon2.jpg
 Lead Editor: Deana Seitz
 
 <br>
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,8 +51,6 @@ Lead Editor: Deana Seitz
             padding: 0;
             cursor: pointer;
             overflow: hidden;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .gallery-container .fx2 .item img {
@@ -181,8 +179,8 @@ Lead Editor: Deana Seitz
             height: 50px;
             width: 50px;
             position: fixed; /* Changed from absolute to fixed for better mobile positioning */
-            top: 20px;
-            right: 20px;
+            top: -60px;
+            right: -60px;
             box-sizing: border-box;
             line-height: 50px;
             display: inline-block;
@@ -233,8 +231,8 @@ Lead Editor: Deana Seitz
                 width: 50%;
             }
             .gallery-container .close-button {
-                right: 20px;
-                top: 20px;
+                right: 0;
+                top: -70px;
             }
             
             /* Prevent zoom on mobile */
@@ -255,8 +253,8 @@ Lead Editor: Deana Seitz
                 max-width: 98%;
             }
             .gallery-container .close-button {
-                right: 15px;
-                top: 15px;
+                right: 0px;
+                top: -60px;
                 height: 40px;
                 width: 40px;
             }
@@ -315,6 +313,20 @@ Lead Editor: Deana Seitz
                         <h4>City Lights</h4>
                         <p>Urban nightscape</p>
                     </div>
+                  <!-- Image 4 -->
+                <a href="#image4" class="image-link">
+                    <div class="item col4">
+                        <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg">
+                        <h4>City Lights</h4>
+                        <p>Urban nightscape</p>
+                    </div>
+                  <!-- Image 4 -->
+                <a href="#image4" class="image-link">
+                    <div class="item col4">
+                        <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg">
+                        <h4>City Lights</h4>
+                        <p>Urban nightscape</p>
+                    </div>
                 </a>
             </div> 
         </div>
@@ -356,9 +368,5 @@ Lead Editor: Deana Seitz
         <div id="close"></div>
     </div>
     
-    <!-- Sample footer to demonstrate no wrapping -->
-    <footer style="background: #333; color: white; padding: 20px; text-align: center;">
-        <p>This is your blog footer - it should not wrap around the gallery</p>
-    </footer>
 </body>
 </html>
