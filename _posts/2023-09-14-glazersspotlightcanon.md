@@ -20,10 +20,10 @@ Lead Editor: Deana Seitz
 ul.slides {
     display: block;
     position: relative;
-    height: 362px;px;
+    height: 362px;
     margin: 0;
     padding: 0;
-    overflow: nowrap;
+    overflow: hidden;
     list-style: none;
 }
 
@@ -57,7 +57,7 @@ ul.slides input {
 
 .slide-image img {
     width: auto;
-    min-width: 100%;
+    min-width: auto;
     height: 100%;
 }
 
