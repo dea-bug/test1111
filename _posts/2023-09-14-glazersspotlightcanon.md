@@ -23,7 +23,7 @@ ul.slides {
     height: 362px;px;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: nowrap;
     list-style: none;
 }
 
@@ -68,7 +68,7 @@ ul.slides input {
     right: 0;
     z-index: 999;
     font-size: 50px;
-    line-height: 300px;
+    line-height: 373px;
     color: #fff;
 }
 
