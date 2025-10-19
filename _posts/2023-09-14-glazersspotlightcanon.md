@@ -21,6 +21,7 @@ ul.slides {
     display: block;
     position: relative;
     height: 362px;
+    border-radius: 8px;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -57,7 +58,7 @@ ul.slides input {
 
 .slide-image img {
     width: auto;
-    min-width: auto;
+    min-width: 100%;
     height: 100%;
 }
 
@@ -124,6 +125,7 @@ input:checked + .slide-container .slide-image {
     opacity: 1;
     transform: scale(1);
     transition: opacity 1s ease-in-out;
+max-width: auto;
 }
 
 input:checked + .slide-container .carousel-controls label {
