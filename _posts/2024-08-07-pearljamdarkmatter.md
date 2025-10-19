@@ -74,7 +74,7 @@ image: pjdm-header.jpg
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background-color: black;
+            background-color:  rgba(0,0,0,0.5);
             color: white;
             border: none;
             width: 50px;
@@ -115,8 +115,8 @@ image: pjdm-header.jpg
         #isolated-carousel .carousel-dot {
             all: initial;
             display: block;
-            width: 12px;
-            height: 12px;
+            width: 6px;
+            height: 6px;
             border-radius: 50%;
             background-color: #ccc;
             cursor: pointer;
@@ -344,7 +344,7 @@ image: pjdm-header.jpg
             position: relative;
             height: 500px;
             overflow: hidden;
-            border-radius: 8px;
+            border-radius: 80px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             box-sizing: border-box;
         }
@@ -387,7 +387,7 @@ image: pjdm-header.jpg
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0,0,0,0.5);
             color: white;
             border: none;
             width: 50px;
