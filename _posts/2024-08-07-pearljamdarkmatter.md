@@ -677,9 +677,6 @@ image: pjdm-header.jpg
 </div>
 
 <!-- Content Sections -->
-<style>
-font-family: 'Montserrat', sans-serif;
-</style>
 
 <p>In the winter of 2022, we had the exciting opportunity to collaborate on visuals for Pearl Jam's 2024 Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
 <br>
