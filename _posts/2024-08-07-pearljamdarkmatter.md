@@ -6,20 +6,19 @@ categories: music videos
 tags: [music videos, color grading, editing, visuals]
 image: pjdm-header.jpg
 ---
+<!-- make modals stack horizonally on mobile, increase modal size, make image with blurb, check if montserrat, change the white flash on slide(?), add credits at bottom of page? -->
 <!-- Header Animation -->
 <div class="anim-header-container">
     <div class="anim-image-wrapper">
-        <img src="[header url]" alt="Concert header"> 
+        <img src="https://joybirdstudios.com/assets/img/darkmatter-header.jpg" alt="Animated concert ticket header image"> 
         <div class="anim-title-container">
-            <span class="anim-title-line">[header text]</span>
-            <span class="anim-title-line">[subtext]</span>
+            <span class="anim-title-line">Pearl Jam: Dark Matter</span>
+            <span class="anim-title-line">World Tour 2024</span>
         </div>
     </div>
 </div>
 
 <!-- Photo credit -->
-<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by [name]</p>
-
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway|Rozha+One" rel="stylesheet">
 
@@ -106,14 +105,13 @@ image: pjdm-header.jpg
     --gallery-primary-color: #fff;
     --gallery-secondary-color: rgba(0, 0, 0, 0.9);
     --gallery-transition-duration: 0.5s;
-    margin-bottom: 40px;
-    font-family: 'Montserrat', sans-serif;
-    padding: 20px;
+    margin-bottom: 40px;    
+    padding: 0px;
     background: #fff;
 }
 
 .gallery-container .col4 {
-    width: 25%;
+    width: 31%;
     float: left;
     position: relative;
 }
@@ -123,13 +121,13 @@ image: pjdm-header.jpg
 }
 
 .gallery-container .container {
-    width: 90%;
+    width: 118%;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .gallery-container .fx2 .item {
-    margin: 10px;
+    margin: 4px;
     padding: 0;
     cursor: pointer;
     overflow: hidden;
@@ -679,14 +677,18 @@ image: pjdm-header.jpg
 </div>
 
 <!-- Content Sections -->
-<p>[text 1]</p>
-<br>
-<p>placeholder image</p>
-<img src="[link]" alt="image"> 
-<p>[text 2]</p>
+<style>
+font-family: 'Montserrat', sans-serif;
+</style>
 
-<!-- First Carousel -->
-<div id="isolated-carousel">
+<p>In the winter of 2022, we had the exciting opportunity to collaborate on visuals for Pearl Jam's 2024 Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
+<br>
+<img src="https://snipboard.io/Gf2r7H.jpg" alt="image showing the sun projected on a screen behind Pearl Jam with text to the right text that reads: 200+ hours
+of 1000 FPS super slow-motion macro footage, real NASA visuals, and archival material combined to create a captivating experience on a 155-foot screen"> 
+<p>The concept for the project was to create something cosmic and awe inspiring, yet human. To bring this vision to life, we developed innovative techniques, including a custom process that allowed Rob Sheridan and his team to paint with light—typically only possible within the realm of still photography—to craft a vast organic cosmic structure for the opening track of the album, “Scared of Fear.”</p>
+
+<!-- Carousel -->
+<div id="isolated-carousel-2">
     <div class="carousel-slides">
         <!-- Slide 1 -->
         <div class="carousel-slide active">
@@ -726,56 +728,23 @@ image: pjdm-header.jpg
 
 <!-- More Content -->
 <center>
-[paragraph of text (3)]
+Take a glimpse of our process below:
 <br>
 [embedded and centered instagram content 1]
 <br>
-<p>[text4]</p>
+<p>Rob Sheridan envisioned a look that was analog, organic and human rather than the typical sharp aesthetics of concert LED screens. This led us to create a soft, glowing appearance that reflected the feel and texture of film.
+</p>
+<p>We combined over 200 hours of 1000 FPS super slow-motion macro footage, real NASA visuals, and archival material to create a captivating experience projected onto a 155-foot screen.
+</p>
 [embedded and centered instagram content 2]
 <br>
 </center>
 
-<!-- Second Carousel -->
-<div id="isolated-carousel-2">
-    <div class="carousel-slides">
-        <!-- Slide 1 -->
-        <div class="carousel-slide active">
-            <img src="[link]" alt="Image 1">
-        </div>
-        
-        <!-- Slide 2 -->
-        <div class="carousel-slide">
-            <img src="[link]" alt="Image 2">
-        </div>
-        
-        <!-- Slide 3 -->
-        <div class="carousel-slide">
-            <img src="[link]" alt="Image 3">
-        </div>
-        
-        <!-- Slide 4 -->
-        <div class="carousel-slide">
-            <img src="[link]" alt="Image 4">
-        </div>
-        
-        <!-- Navigation Arrows -->
-        <button class="carousel-arrow prev">&#10094;</button>
-        <button class="carousel-arrow next">&#10095;</button>
-    </div>
-    
-    <!-- Dots Indicator -->
-    <div class="carousel-dots">
-        <span class="carousel-dot active" data-index="0"></span>
-        <span class="carousel-dot" data-index="1"></span>
-        <span class="carousel-dot" data-index="2"></span>
-        <span class="carousel-dot" data-index="3"></span>
-    </div>
-</div>
-
 <br>
 
 <!-- Final Link -->
-<a href="[website source]">Link to website source example.com</a>
+<p>[credits placeholder]</p>
+<a href="https://pearljam.com/news/dark-matter-world-tour-2024">Pearl Jam Dark Matter Tour</a>
 
 <script>
 // Carousel functionality for both carousels
