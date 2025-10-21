@@ -6,7 +6,7 @@ categories: music videos
 tags: [music videos, color grading, editing, visuals]
 image: pjdm-header.jpg
 ---
-<!-- Replace placeholders, switch first white slideshow w/ black, make modals stack horizonally on mobile, increase modal size, make image with blurb, check if montserrat, change the white flash on slide(?), add credits at bottom of page? -->
+Replace placeholders, switch first white slideshow w/ black, make modals stack horizonally on mobile, increase modal size, make image with blurb, check if montserrat, change the white flash on slide(?), add credits at bottom of page
 <!-- Header Animation -->
 <div class="anim-header-container">
     <div class="anim-image-wrapper">
