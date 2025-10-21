@@ -6,7 +6,7 @@ categories: music videos
 tags: [music videos, color grading, editing, visuals]
 image: pjdm-header.jpg
 ---
-<!-- make modals stack horizonally on mobile, increase modal size, make image with blurb, check if montserrat, change the white flash on slide(?), add credits at bottom of page? -->
+<!-- Replace placeholders, switch first white slideshow w/ black, make modals stack horizonally on mobile, increase modal size, make image with blurb, check if montserrat, change the white flash on slide(?), add credits at bottom of page? -->
 <!-- Header Animation -->
 <div class="anim-header-container">
     <div class="anim-image-wrapper">
@@ -19,6 +19,8 @@ image: pjdm-header.jpg
 </div>
 
 <!-- Photo credit -->
+<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by Rob Sheridan Productions</p>
+
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway|Rozha+One" rel="stylesheet">
 
@@ -105,13 +107,14 @@ image: pjdm-header.jpg
     --gallery-primary-color: #fff;
     --gallery-secondary-color: rgba(0, 0, 0, 0.9);
     --gallery-transition-duration: 0.5s;
-    margin-bottom: 40px;    
-    padding: 0px;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
     background: #fff;
 }
 
 .gallery-container .col4 {
-    width: 31%;
+    width: 25%;
     float: left;
     position: relative;
 }
@@ -121,13 +124,13 @@ image: pjdm-header.jpg
 }
 
 .gallery-container .container {
-    width: 118%;
+    width: 90%;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .gallery-container .fx2 .item {
-    margin: 4px;
+    margin: 10px;
     padding: 0;
     cursor: pointer;
     overflow: hidden;
@@ -677,15 +680,14 @@ image: pjdm-header.jpg
 </div>
 
 <!-- Content Sections -->
-
 <p>In the winter of 2022, we had the exciting opportunity to collaborate on visuals for Pearl Jam's 2024 Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
 <br>
 <img src="https://snipboard.io/Gf2r7H.jpg" alt="image showing the sun projected on a screen behind Pearl Jam with text to the right text that reads: 200+ hours
 of 1000 FPS super slow-motion macro footage, real NASA visuals, and archival material combined to create a captivating experience on a 155-foot screen"> 
 <p>The concept for the project was to create something cosmic and awe inspiring, yet human. To bring this vision to life, we developed innovative techniques, including a custom process that allowed Rob Sheridan and his team to paint with light—typically only possible within the realm of still photography—to craft a vast organic cosmic structure for the opening track of the album, “Scared of Fear.”</p>
 
-<!-- Carousel -->
-<div id="isolated-carousel-2">
+<!-- First Carousel -->
+<div id="isolated-carousel">
     <div class="carousel-slides">
         <!-- Slide 1 -->
         <div class="carousel-slide active">
@@ -736,6 +738,43 @@ Take a glimpse of our process below:
 [embedded and centered instagram content 2]
 <br>
 </center>
+
+<!-- Second Carousel -->
+<div id="isolated-carousel-2">
+    <div class="carousel-slides">
+        <!-- Slide 1 -->
+        <div class="carousel-slide active">
+            <img src="[link]" alt="Image 1">
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 2">
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 3">
+        </div>
+        
+        <!-- Slide 4 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 4">
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow prev">&#10094;</button>
+        <button class="carousel-arrow next">&#10095;</button>
+    </div>
+    
+    <!-- Dots Indicator -->
+    <div class="carousel-dots">
+        <span class="carousel-dot active" data-index="0"></span>
+        <span class="carousel-dot" data-index="1"></span>
+        <span class="carousel-dot" data-index="2"></span>
+        <span class="carousel-dot" data-index="3"></span>
+    </div>
+</div>
 
 <br>
 
