@@ -6,6 +6,8 @@ categories: advertisement
 tags: [color grading, editing]
 image: rainiersquare.jpeg
 ---
+font mobile edot
+
 <div class="browser" url="https://liverainiersquare.com/">
     <div class="iframe-wrapper">
       <iframe src="https://player.vimeo.com/progressive_redirect/playback/933746211/rendition/1080p/file.mp4?loc=external&signature=e0fc2aba09b45493d9d6eeef4697e39d9cdb532717b9c19484cfc8b64b6da0fa" frameborder="0" allowfullscreen>      
@@ -97,16 +99,27 @@ color:#454f40;
 letter-spacing:0.09em;
 margin-top:10px;
 }
+  
+   @media (max-width: 768px) {
+            #polaroid figcaption{
+font-size:1.2em;
+            }
+ @media (max-width: 480px) {
+            #polaroid figcaption{
+font-size:1em;
+            }
+
+  
+  
   </style>
 
 <div id="polaroid">
   <figure>
 <a href="https://www.geeksforgeeks.org/"
    style="text-decoration: none;">
-    <img src="https://snipboard.io/503yjq.jpg" alt="This cat is so cute" title="Clooney Dog & Friends, Pet Photography Landing Page 2024"/> 
-    <figcaption>The Residences @ Rainier Square<br>Landing Page 2024</figcaption>
+    <img src="https://snipboard.io/ui3zrU.jpg" alt="Screenshot of Live Website displaying Landing Video by Joybird Studios" title="Clooney Dog & Friends, Pet Photography Landing Page 2024"/> 
+    <figcaption>Lorem Ipsum<br>Whateverum 2024</figcaption>
   </figure>
 </div>
-<br/><br/>
-</div>
-<a href="https://liverainiersquare.com/">Live Rainier Square</a>
+
+<br>
