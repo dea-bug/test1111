@@ -14,7 +14,7 @@ image: patheader.jpg
 }
 </style>
 
-<div class="browser" url="//patricianugenttextiles.com/">
+<div class="browser" url="https://patricianugenttextiles.com/">
     <div class="iframe-wrapper">
       <iframe src="//www.youtube.com/embed/So2vq75J9to?si=vBNNkhaqnvsDO6b1" frameborder="0" allowfullscreen>      
       </iframe>
@@ -31,5 +31,4 @@ PA Yukimi Bishop
 
 <br>
 
-<a href="//patricianugenttextiles.com/"
- //patricianugenttextiles.com/</a>
+  <a href="//patricianugenttextiles.com/" target="_blank">patricianugenttextiles.com</a> 
