@@ -22,8 +22,8 @@ figure, figcaption {
 display: block;
 }
 #polaroid{
-width:100%;
-padding:0px 10px;
+width:81%;
+padding:10px 10px;
 margin:auto;
 text-align: center;
 }
@@ -117,5 +117,3 @@ font-size:1em;
    style="text-decoration: none;">
     <img src="https://snipboard.io/ui3zrU.jpg" alt="Screenshot of Live Website displaying Landing Video by Joybird Studios" title="Clooney Dog & Friends, Pet Photography Landing Page 2024"/> 
     <figcaption>Lorem Ipsum<br>Whateverum 2024</figcaption>
-</div>
-<br>
