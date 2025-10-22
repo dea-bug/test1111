@@ -42,3 +42,12 @@ input[type="submit"], button, textarea {
 }
 
 textarea { width: 73%;  resize: none; }
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.break {
+    white-space: pre-wrap;
+}
