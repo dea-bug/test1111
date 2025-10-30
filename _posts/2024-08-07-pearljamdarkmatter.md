@@ -6,6 +6,8 @@ categories: music videos
 tags: [music videos, color grading, editing, visuals]
 image: pjdm-header.jpg
 ---
+
+-- find mobile friendly modal opener,  make modals stack no matter what (stops at 481), find old carosel code, replace links and text, hide widgets beyond 250px screen] 
 <!-- Header Animation -->
 <div class="anim-header-container">
     <div class="anim-image-wrapper">
@@ -629,172 +631,14 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 
 <!-- More Content -->
 <center>
-Take a glimpse of our process below:
+<p>Take a glimpse of our process below:</p>
 <br>
 [embedded and centered instagram content 1]
-<br>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
-[embedded and centered instagram content 2]
-<br>
 </center>
-
-<!-- Single Carousel (Second Carousel) -->
-<div id="isolated-carousel-2">
-    <div class="carousel-slides">
-        <!-- Slide 1 -->
-        <div class="carousel-slide active">
-            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 1">
-        </div>
-        
-        <!-- Slide 2 -->
-        <div class="carousel-slide">
-            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 2">
-        </div>
-        
-        <!-- Slide 3 -->
-        <div class="carousel-slide">
-            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 3">
-        </div>
-        
-        <!-- Slide 4 -->
-        <div class="carousel-slide">
-            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 4">
-        </div>
-        
-        <!-- Navigation Arrows -->
-        <button class="carousel-arrow prev">&#10094;</button>
-        <button class="carousel-arrow next">&#10095;</button>
-    </div>
-    
-    <!-- Dots Indicator -->
-    <div class="carousel-dots">
-        <span class="carousel-dot active" data-index="0"></span>
-        <span class="carousel-dot" data-index="1"></span>
-        <span class="carousel-dot" data-index="2"></span>
-        <span class="carousel-dot" data-index="3"></span>
-    </div>
-</div>
-
 <br>
-
-<p>Lorem link</p>
-
-<script>
-// Carousel functionality for the remaining carousel
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize carousel
-    initCarousel('isolated-carousel-2');
-    
-    function initCarousel(carouselId) {
-        const carousel = document.getElementById(carouselId);
-        
-        if (!carousel) {
-            console.log('Carousel not found:', carouselId);
-            return;
-        }
-        
-        const slides = carousel.querySelectorAll('.carousel-slide');
-        const dots = carousel.querySelectorAll('.carousel-dot');
-        const prevBtn = carousel.querySelector('.carousel-arrow.prev');
-        const nextBtn = carousel.querySelector('.carousel-arrow.next');
-        
-        if (slides.length === 0) {
-            console.log('No slides found in carousel:', carouselId);
-            return;
-        }
-        
-        let currentSlide = 0;
-        const totalSlides = slides.length;
-        
-        function showSlide(index) {
-            // Ensure index is within bounds
-            if (index < 0) index = totalSlides - 1;
-            if (index >= totalSlides) index = 0;
-            
-            slides.forEach(slide => {
-                slide.classList.remove('active');
-            });
-            
-            dots.forEach(dot => {
-                dot.classList.remove('active');
-            });
-            
-            slides[index].classList.add('active');
-            if (dots[index]) {
-                dots[index].classList.add('active');
-            }
-            
-            currentSlide = index;
-        }
-        
-        function nextSlide() {
-            let nextIndex = currentSlide + 1;
-            if (nextIndex >= totalSlides) {
-                nextIndex = 0;
-            }
-            showSlide(nextIndex);
-        }
-        
-        function prevSlide() {
-            let prevIndex = currentSlide - 1;
-            if (prevIndex < 0) {
-                prevIndex = totalSlides - 1;
-            }
-            showSlide(prevIndex);
-        }
-        
-        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-        
-        dots.forEach(dot => {
-            dot.addEventListener('click', function() {
-                const slideIndex = parseInt(this.getAttribute('data-index'));
-                if (!isNaN(slideIndex)) {
-                    showSlide(slideIndex);
-                }
-            });
-        });
-        
-        // Auto-advance slides
-        let slideInterval = setInterval(nextSlide, 5000);
-        
-        const carouselSlides = carousel.querySelector('.carousel-slides');
-        if (carouselSlides) {
-            carouselSlides.addEventListener('mouseenter', () => {
-                clearInterval(slideInterval);
-            });
-            
-            carouselSlides.addEventListener('mouseleave', () => {
-                slideInterval = setInterval(nextSlide, 5000);
-            });
-            
-            // Touch swipe support
-            let startX = 0;
-            let endX = 0;
-            
-            carouselSlides.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-            });
-            
-            carouselSlides.addEventListener('touchend', (e) => {
-                endX = e.changedTouches[0].clientX;
-                handleSwipe();
-            });
-            
-            function handleSwipe() {
-                const swipeThreshold = 50;
-                
-                if (startX - endX > swipeThreshold) {
-                    nextSlide();
-                } else if (endX - startX > swipeThreshold) {
-                    prevSlide();
-                }
-            }
-        }
-        
-        // Initialize first slide
-        showSlide(0);
-    }
-});
-</script>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<center>
+[embedded and centered instagram content 2]
+</center>
+<br>

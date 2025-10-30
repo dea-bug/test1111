@@ -7,38 +7,197 @@ tags: [music videos, color grading]
 image: luckynumber.jpg
 ---
 
+<!-- First Carousel -->
+<div id="isolated-carousel">
+    <div class="carousel-slides">
+        <!-- Slide 1 -->
+        <div class="carousel-slide active">
+            <img src="[link]" alt="Image 1">
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 2">
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 3">
+        </div>
+        
+        <!-- Slide 4 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 4">
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow prev">&#10094;</button>
+        <button class="carousel-arrow next">&#10095;</button>
+    </div>
+    
+    <!-- Dots Indicator -->
+    <div class="carousel-dots">
+        <span class="carousel-dot active" data-index="0"></span>
+        <span class="carousel-dot" data-index="1"></span>
+        <span class="carousel-dot" data-index="2"></span>
+        <span class="carousel-dot" data-index="3"></span>
+    </div>
+</div>
 
-
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1108215275?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Braiding a New Life — Trailer"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 <br>
 
-Credits
+<!-- More Content -->
+<center>
+Take a glimpse of our process below:
+<br>
+[embedded and centered instagram content 1]
+<br>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+[embedded and centered instagram content 2]
+<br>
+</center>
 
-    Dir/Prod by Willow O’Feral & Brad Heck
-    Featuring Sarah, Liv, Kate, & Dora
-    Music by the Divinda Brothers, The Moon Shells, and Allison Leialoha Milham 
-    Color Grading by JoyBird Studios/Aster Teter
-    Post Production Sound Mix by Loud Sun Studio/Ben Rogers
-
+<!-- Second Carousel -->
+<div id="isolated-carousel-2">
+    <div class="carousel-slides">
+        <!-- Slide 1 -->
+        <div class="carousel-slide active">
+            <img src="[link]" alt="Image 1">
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 2">
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 3">
+        </div>
+        
+        <!-- Slide 4 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 4">
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow prev">&#10094;</button>
+        <button class="carousel-arrow next">&#10095;</button>
+    </div>
+    
+    <!-- Dots Indicator -->
+    <div class="carousel-dots">
+        <span class="carousel-dot active" data-index="0"></span>
+        <span class="carousel-dot" data-index="1"></span>
+        <span class="carousel-dot" data-index="2"></span>
+        <span class="carousel-dot" data-index="3"></span>
+    </div>
+</div>
 
 <br>
 
-"Braiding A New Life is a love letter to Brattleboro, Vermont, and a passionate portrait of reciprocity, mutual aid, and the value of cross-cultural friendships and diverse community. This 36-minute documentary follows Sarah, a Ghanaian asylum seeker, as she navigates life in Southern Vermont. We are with Sarah as she learns to drive with the help of a local volunteer, braids her friend Dora’s hair, chats on the local radio station, listens to a Congolese refugee band at a houseshow, shops at an African grocery in Springfield MA, and prepares for her asylum case hearing with the support the Community Asylum Seekers Project. Above all, this is a portrait of four women — who together weave a shining net of support, advocacy, humor, ferocity, tenderness, and care — in their relationship to one another and in commitment to a world in which immigrants are welcomed, valued and respected."
+Lorem link
 
-For more info please visit https://www.hapticpictures.media/film/braiding-a-new-life/
-
-<br>
-.....
- <iframe width="560" height="315" src="https://www.youtube.com/embed/aDV3NMYCsxM?si=dqX0y_NOHmOQ7edE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<br>
-Directed by: Hailey Bunn @helllllley <br>
-Co-Directors of Photography: Aster Teter @joybirdstudios <br>
-Hailey Bunn @helllllley <br>
-Lighting Technicians: <br>
-Devin Belmain @devbel <br>
-Cash Danielsen @absofruitely <br>
-G+E: James Day @cacklecrypt <br>
-PA: Jesse Beecher @jesse_beecher <br>
-Edited by: Hailey Bunn @helllllley <br>
-Colorist: Aster Teter @joybirdstudios <br>
-Song produced by: Jim Kaufman @jimkaufmanproductions 
+<script>
+// Carousel functionality for both carousels
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize first carousel
+    initCarousel('isolated-carousel');
+    
+    // Initialize second carousel  
+    initCarousel('isolated-carousel-2');
+    
+    function initCarousel(carouselId) {
+        const carousel = document.getElementById(carouselId);
+        
+        if (!carousel) return;
+        
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dots = carousel.querySelectorAll('.carousel-dot');
+        const prevBtn = carousel.querySelector('.carousel-arrow.prev');
+        const nextBtn = carousel.querySelector('.carousel-arrow.next');
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        
+        function showSlide(index) {
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            let nextIndex = currentSlide + 1;
+            if (nextIndex >= totalSlides) {
+                nextIndex = 0;
+            }
+            showSlide(nextIndex);
+        }
+        
+        function prevSlide() {
+            let prevIndex = currentSlide - 1;
+            if (prevIndex < 0) {
+                prevIndex = totalSlides - 1;
+            }
+            showSlide(prevIndex);
+        }
+        
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const slideIndex = parseInt(this.getAttribute('data-index'));
+                showSlide(slideIndex);
+            });
+        });
+        
+        // Auto-advance slides
+        let slideInterval = setInterval(nextSlide, 5000);
+        
+        const carouselSlides = carousel.querySelector('.carousel-slides');
+        if (carouselSlides) {
+            carouselSlides.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            carouselSlides.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+            
+            // Touch swipe support
+            let startX = 0;
+            let endX = 0;
+            
+            carouselSlides.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            carouselSlides.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                
+                if (startX - endX > swipeThreshold) {
+                    nextSlide();
+                } else if (endX - startX > swipeThreshold) {
+                    prevSlide();
+                }
+            }
+        }
+    }
+});
+</script>
