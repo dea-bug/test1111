@@ -7,7 +7,158 @@ tags: [music videos, color grading]
 image: luckynumber.jpg
 ---
 
-<!-- First Carousel -->
+<style>
+
+/* Carousel Styles */
+
+#isolated-carousel {
+    all: initial;
+    display: block;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#isolated-carousel .carousel-slides {
+    all: initial;
+    display: block;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 80px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+#isolated-carousel .carousel-slide {
+    all: initial;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+#isolated-carousel .carousel-slide.active {
+    opacity: 1;
+}
+
+#isolated-carousel .carousel-slide img {
+    all: initial;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+#isolated-carousel .carousel-arrow {
+    all: initial;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    z-index: 10;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#isolated-carousel .carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#isolated-carousel .carousel-arrow.prev {
+    left: 15px;
+}
+
+#isolated-carousel .carousel-arrow.next {
+    right: 15px;
+}
+
+#isolated-carousel .carousel-dots {
+    all: initial;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+#isolated-carousel .carousel-dot {
+    all: initial;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+#isolated-carousel .carousel-dot.active {
+    background-color: #333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    
+    #isolated-carousel .carousel-slides {
+        height: 350px;
+    }
+    
+    #isolated-carousel .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #isolated-carousel .carousel-slides {
+        height: 250px;
+    }
+    
+    #isolated-carousel .carousel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    
+    #isolated-carousel .carousel-dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+</style>
+
+<!-- Carousel -->
 <div id="isolated-carousel">
     <div class="carousel-slides">
         <!-- Slide 1 -->
@@ -46,67 +197,12 @@ image: luckynumber.jpg
 
 <br>
 
-<!-- More Content -->
-<center>
-Take a glimpse of our process below:
-<br>
-[embedded and centered instagram content 1]
-<br>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
-[embedded and centered instagram content 2]
-<br>
-</center>
-
-<!-- Second Carousel -->
-<div id="isolated-carousel-2">
-    <div class="carousel-slides">
-        <!-- Slide 1 -->
-        <div class="carousel-slide active">
-            <img src="[link]" alt="Image 1">
-        </div>
-        
-        <!-- Slide 2 -->
-        <div class="carousel-slide">
-            <img src="[link]" alt="Image 2">
-        </div>
-        
-        <!-- Slide 3 -->
-        <div class="carousel-slide">
-            <img src="[link]" alt="Image 3">
-        </div>
-        
-        <!-- Slide 4 -->
-        <div class="carousel-slide">
-            <img src="[link]" alt="Image 4">
-        </div>
-        
-        <!-- Navigation Arrows -->
-        <button class="carousel-arrow prev">&#10094;</button>
-        <button class="carousel-arrow next">&#10095;</button>
-    </div>
-    
-    <!-- Dots Indicator -->
-    <div class="carousel-dots">
-        <span class="carousel-dot active" data-index="0"></span>
-        <span class="carousel-dot" data-index="1"></span>
-        <span class="carousel-dot" data-index="2"></span>
-        <span class="carousel-dot" data-index="3"></span>
-    </div>
-</div>
-
-<br>
-
-Lorem link
-
+Lorem link here!
+<!-- Carousel functionality -->
 <script>
-// Carousel functionality for both carousels
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize first carousel
+
     initCarousel('isolated-carousel');
-    
-    // Initialize second carousel  
-    initCarousel('isolated-carousel-2');
     
     function initCarousel(carouselId) {
         const carousel = document.getElementById(carouselId);
