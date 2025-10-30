@@ -3,7 +3,7 @@ layout: page
 title: Testimonials
 permalink: /testimonials
 ---
-- put widget on top, fix styling so the header isn't changed, make it hold longer text, make it mobile friendly
+- put widget on top, fix styling so the header isn't changed, make it hold longer text, make it mobile friendly text size
 <style>
 /* Testimonial CSS Code Start */
 /* background */

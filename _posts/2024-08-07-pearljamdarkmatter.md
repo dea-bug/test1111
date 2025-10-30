@@ -111,7 +111,18 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     }
 }
 
-/* Gallery Styles - Fixed for horizontal stacking and larger modals */
+/* Responsive single image in content section */
+.content-single-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Styles - Fixed for horizontal stacking with flexbox */
 .gallery-container {
     --gallery-primary-color: #fff;
     --gallery-secondary-color: rgba(0, 0, 0, 0.9);
@@ -122,9 +133,26 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     background: #fff;
 }
 
+.gallery-container .container {
+    width: 100% !important;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Use flexbox for horizontal stacking */
+.gallery-container .fx2 {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 10px !important;
+}
+
 .gallery-container .col4 {
-    width: 33.333% !important; /* Force 3 columns for horizontal stacking */
-    float: left;
+    flex: 1 !important;
+    min-width: 0 !important; /* Allow flex items to shrink */
     position: relative;
     box-sizing: border-box;
 }
@@ -133,25 +161,13 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     transition: all var(--gallery-transition-duration) ease;
 }
 
-.gallery-container .container {
-    width: 100% !important; /* Full width for better horizontal layout */
-    margin: 0 auto;
-    overflow: hidden;
-    display: block;
-}
-
-.gallery-container .fx2 {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-}
-
 .gallery-container .fx2 .item {
-    margin: 10px;
+    margin: 0 !important;
     padding: 0;
     cursor: pointer;
     overflow: hidden;
-    float: left; /* Ensure horizontal stacking */
+    width: 100%;
+    height: 100%;
 }
 
 .gallery-container .fx2 .item img {
@@ -160,6 +176,8 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     max-width: 100%;
     height: auto;
     width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* Ensure consistent sizing */
 }
 
 .gallery-container .fx2 .image-link:hover .item img,
@@ -231,9 +249,9 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 10000; /* Higher z-index to overcome theme conflicts */
+    z-index: 10000;
     pointer-events: none;
-    padding: 10px; /* Reduced padding for larger modal */
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -255,8 +273,8 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 
 .gallery-container .modal-content {
     position: relative;
-    max-width: 95% !important; /* Larger modal for readability */
-    max-height: 95% !important; /* Larger modal for readability */
+    max-width: 95% !important;
+    max-height: 95% !important;
     text-align: center;
     transform: scale(0.8);
     transition: transform 0.3s ease;
@@ -269,7 +287,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 
 .gallery-container .modal-image {
     max-width: 100% !important;
-    max-height: 85vh !important; /* Larger image in modal */
+    max-height: 85vh !important;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -279,8 +297,8 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     height: 50px;
     width: 50px;
     position: fixed;
-    top: 20px !important; /* Better positioning */
-    right: 20px !important; /* Better positioning */
+    top: 20px !important;
+    right: 20px !important;
     box-sizing: border-box;
     line-height: 50px;
     display: inline-block;
@@ -325,122 +343,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     display: none;
 }
 
-/* Carousel Styles with higher specificity */
-#isolated-carousel {
-    all: initial !important;
-    display: block !important;
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    position: relative;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-#isolated-carousel .carousel-slides {
-    all: initial !important;
-    display: block !important;
-    position: relative;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-}
-
-#isolated-carousel .carousel-slide {
-    all: initial !important;
-    display: block !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5f5f5;
-    box-sizing: border-box;
-}
-
-#isolated-carousel .carousel-slide.active {
-    opacity: 1 !important;
-}
-
-#isolated-carousel .carousel-slide img {
-    all: initial !important;
-    display: block !important;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    box-sizing: border-box;
-}
-
-#isolated-carousel .carousel-arrow {
-    all: initial !important;
-    display: block !important;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s;
-    z-index: 10;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-#isolated-carousel .carousel-arrow:hover {
-    background-color: grey;
-}
-
-#isolated-carousel .carousel-arrow.prev {
-    left: 15px;
-}
-
-#isolated-carousel .carousel-arrow.next {
-    right: 15px;
-}
-
-#isolated-carousel .carousel-dots {
-    all: initial !important;
-    display: flex !important;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 10px;
-    box-sizing: border-box;
-}
-
-#isolated-carousel .carousel-dot {
-    all: initial !important;
-    display: block !important;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #ccc;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-sizing: border-box;
-}
-
-#isolated-carousel .carousel-dot.active {
-    background-color: #333 !important;
-}
-
-/* Second Carousel Styles */
+/* Second Carousel Styles - Fixed to work as proper carousel */
 #isolated-carousel-2 {
     all: initial !important;
     display: block !important;
@@ -566,8 +469,9 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         margin-bottom: 3px;
     }
     
-    .gallery-container .col4 {
-        width: 50% !important; /* 2 columns on tablet */
+    /* Keep horizontal layout on tablet but adjust spacing */
+    .gallery-container .fx2 {
+        gap: 8px !important;
     }
     
     .gallery-container .close-button {
@@ -580,12 +484,10 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         max-height: 98% !important;
     }
     
-    #isolated-carousel .carousel-slides,
     #isolated-carousel-2 .carousel-slides {
         height: 350px;
     }
     
-    #isolated-carousel .carousel-arrow,
     #isolated-carousel-2 .carousel-arrow {
         width: 40px;
         height: 40px;
@@ -600,20 +502,15 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         width: 80%;
     }
     
+    /* Switch to vertical stacking only on very small screens */
+    .gallery-container .fx2 {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
     .gallery-container .col4 {
-        width: 100% !important; /* 1 column on mobile but still horizontal flow */
-        float: none;
-        display: block;
-        margin: 10px auto;
-    }
-    
-    .gallery-container .container {
-        overflow: visible;
-    }
-    
-    .gallery-container .fx2 .item {
-        float: none;
-        display: block;
+        flex: none !important;
+        width: 100% !important;
     }
     
     .gallery-container .modal-content {
@@ -640,22 +537,26 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         max-height: 75vh !important;
     }
     
-    #isolated-carousel .carousel-slides,
     #isolated-carousel-2 .carousel-slides {
         height: 250px;
+        border-radius: 40px; /* Smaller border radius on mobile */
     }
     
-    #isolated-carousel .carousel-arrow,
     #isolated-carousel-2 .carousel-arrow {
         width: 35px;
         height: 35px;
         font-size: 18px;
     }
     
-    #isolated-carousel .carousel-dot,
     #isolated-carousel-2 .carousel-dot {
         width: 12px;
         height: 12px;
+    }
+    
+    /* Ensure single image is fully responsive on mobile */
+    .content-single-image {
+        max-width: 100% !important;
+        height: auto !important;
     }
 }
 </style>
@@ -718,45 +619,11 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 <!-- Content Sections -->
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
 <br>
-<img src="https://snipboard.io/6R3jOh.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam"> 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
 
-<!-- First Carousel - Fixed with placeholder images -->
-<div id="isolated-carousel">
-    <div class="carousel-slides">
-        <!-- Slide 1 -->
-        <div class="carousel-slide active">
-            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 1">
-        </div>
-        
-        <!-- Slide 2 -->
-        <div class="carousel-slide">
-            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 2">
-        </div>
-        
-        <!-- Slide 3 -->
-        <div class="carousel-slide">
-            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 3">
-        </div>
-        
-        <!-- Slide 4 -->
-        <div class="carousel-slide">
-            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 4">
-        </div>
-        
-        <!-- Navigation Arrows -->
-        <button class="carousel-arrow prev">&#10094;</button>
-        <button class="carousel-arrow next">&#10095;</button>
-    </div>
-    
-    <!-- Dots Indicator -->
-    <div class="carousel-dots">
-        <span class="carousel-dot active" data-index="0"></span>
-        <span class="carousel-dot" data-index="1"></span>
-        <span class="carousel-dot" data-index="2"></span>
-        <span class="carousel-dot" data-index="3"></span>
-    </div>
-</div>
+<!-- Responsive Single Image -->
+<img src="https://snipboard.io/6R3jOh.jpg" alt="Content image" class="content-single-image">
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
 
 <br>
 
@@ -772,7 +639,7 @@ Take a glimpse of our process below:
 <br>
 </center>
 
-<!-- Second Carousel - Fixed with placeholder images -->
+<!-- Single Carousel (Second Carousel) -->
 <div id="isolated-carousel-2">
     <div class="carousel-slides">
         <!-- Slide 1 -->
@@ -814,12 +681,9 @@ Take a glimpse of our process below:
 <p>Lorem link</p>
 
 <script>
-// Carousel functionality for both carousels
+// Carousel functionality for the remaining carousel
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize first carousel
-    initCarousel('isolated-carousel');
-    
-    // Initialize second carousel  
+    // Initialize carousel
     initCarousel('isolated-carousel-2');
     
     function initCarousel(carouselId) {
