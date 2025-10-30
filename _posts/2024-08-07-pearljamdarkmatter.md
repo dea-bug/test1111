@@ -6,25 +6,34 @@ categories: music videos
 tags: [music videos, color grading, editing, visuals]
 image: pjdm-header.jpg
 ---
-CHECK GITHUB for working version to revert to ----Replace placeholders, switch first white slideshow w/ black, make modals stack horizonally on mobile, increase modal size, make image with blurb, check if montserrat, change the white flash on slide(?), add credits at bottom of page
 <!-- Header Animation -->
 <div class="anim-header-container">
     <div class="anim-image-wrapper">
-        <img src="https://joybirdstudios.com/assets/img/darkmatter-header.jpg" alt="Animated concert ticket header image"> 
+        <img src="https://snipboard.io/xh1kbv.jpg" alt="Animated concert ticket header image"> 
         <div class="anim-title-container">
-            <span class="anim-title-line">Pearl Jam: Dark Matter</span>
+            <span class="anim-title-line">------</span>
             <span class="anim-title-line">World Tour 2024</span>
         </div>
     </div>
 </div>
 
 <!-- Photo credit -->
-<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by Rob Sheridan Productions</p>
+<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by ---</p>
 
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Raleway|Rozha+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Rozha+One|Montserrat:400,500,600,700&display=swap" rel="stylesheet">
 
 <style>
+/* Import Montserrat for all paragraph text */
+.post-content p {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Force Montserrat on all regular paragraphs */
+p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
 /* Header Animation Styles */
 .anim-header-container {
     position: relative;
@@ -102,7 +111,7 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
     }
 }
 
-/* Gallery Styles */
+/* Gallery Styles - Fixed for horizontal stacking and larger modals */
 .gallery-container {
     --gallery-primary-color: #fff;
     --gallery-secondary-color: rgba(0, 0, 0, 0.9);
@@ -114,9 +123,10 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 .gallery-container .col4 {
-    width: 25%;
+    width: 33.333% !important; /* Force 3 columns for horizontal stacking */
     float: left;
     position: relative;
+    box-sizing: border-box;
 }
 
 .gallery-container .transition {
@@ -124,8 +134,15 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 .gallery-container .container {
-    width: 90%;
+    width: 100% !important; /* Full width for better horizontal layout */
     margin: 0 auto;
+    overflow: hidden;
+    display: block;
+}
+
+.gallery-container .fx2 {
+    display: block;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -134,6 +151,7 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
     padding: 0;
     cursor: pointer;
     overflow: hidden;
+    float: left; /* Ensure horizontal stacking */
 }
 
 .gallery-container .fx2 .item img {
@@ -199,7 +217,7 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
     opacity: 1;
 }
 
-/* Modal Styles */
+/* Modal Styles - Made larger for readability */
 .gallery-container .modal {
     position: fixed;
     top: 0;
@@ -213,9 +231,9 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 10000; /* Higher z-index to overcome theme conflicts */
     pointer-events: none;
-    padding: 20px;
+    padding: 10px; /* Reduced padding for larger modal */
     box-sizing: border-box;
 }
 
@@ -237,8 +255,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 
 .gallery-container .modal-content {
     position: relative;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 95% !important; /* Larger modal for readability */
+    max-height: 95% !important; /* Larger modal for readability */
     text-align: center;
     transform: scale(0.8);
     transition: transform 0.3s ease;
@@ -250,8 +268,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 .gallery-container .modal-image {
-    max-width: 100%;
-    max-height: 80vh;
+    max-width: 100% !important;
+    max-height: 85vh !important; /* Larger image in modal */
     height: auto;
     display: block;
     margin: 0 auto;
@@ -261,8 +279,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
     height: 50px;
     width: 50px;
     position: fixed;
-    top: -60px;
-    right: -60px;
+    top: 20px !important; /* Better positioning */
+    right: 20px !important; /* Better positioning */
     box-sizing: border-box;
     line-height: 50px;
     display: inline-block;
@@ -307,10 +325,10 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
     display: none;
 }
 
-/* Carousel Styles */
+/* Carousel Styles with higher specificity */
 #isolated-carousel {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
@@ -320,8 +338,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel .carousel-slides {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     position: relative;
     height: 500px;
     overflow: hidden;
@@ -331,8 +349,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel .carousel-slide {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     position: absolute;
     top: 0;
     left: 0;
@@ -348,12 +366,12 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel .carousel-slide.active {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 #isolated-carousel .carousel-slide img {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     max-width: 100%;
     max-height: 100%;
     width: auto;
@@ -363,8 +381,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel .carousel-arrow {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -398,8 +416,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel .carousel-dots {
-    all: initial;
-    display: flex;
+    all: initial !important;
+    display: flex !important;
     justify-content: center;
     margin-top: 20px;
     gap: 10px;
@@ -407,8 +425,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel .carousel-dot {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -419,13 +437,13 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel .carousel-dot.active {
-    background-color: #333;
+    background-color: #333 !important;
 }
 
 /* Second Carousel Styles */
 #isolated-carousel-2 {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
@@ -435,8 +453,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel-2 .carousel-slides {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     position: relative;
     height: 500px;
     overflow: hidden;
@@ -446,8 +464,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel-2 .carousel-slide {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     position: absolute;
     top: 0;
     left: 0;
@@ -463,12 +481,12 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel-2 .carousel-slide.active {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 #isolated-carousel-2 .carousel-slide img {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     max-width: 100%;
     max-height: 100%;
     width: auto;
@@ -478,8 +496,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel-2 .carousel-arrow {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -513,8 +531,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel-2 .carousel-dots {
-    all: initial;
-    display: flex;
+    all: initial !important;
+    display: flex !important;
     justify-content: center;
     margin-top: 20px;
     gap: 10px;
@@ -522,8 +540,8 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel-2 .carousel-dot {
-    all: initial;
-    display: block;
+    all: initial !important;
+    display: block !important;
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -534,10 +552,10 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 }
 
 #isolated-carousel-2 .carousel-dot.active {
-    background-color: #333;
+    background-color: #333 !important;
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsiveness with horizontal gallery fix */
 @media (max-width: 768px) {
     .anim-title-container {
         bottom: 15px;
@@ -549,12 +567,17 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
     }
     
     .gallery-container .col4 {
-        width: 50%;
+        width: 50% !important; /* 2 columns on tablet */
     }
     
     .gallery-container .close-button {
-        right: 0;
-        top: -70px;
+        right: 10px !important;
+        top: 10px !important;
+    }
+    
+    .gallery-container .modal-content {
+        max-width: 98% !important;
+        max-height: 98% !important;
     }
     
     #isolated-carousel .carousel-slides,
@@ -578,16 +601,29 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
     }
     
     .gallery-container .col4 {
-        width: 100%;
+        width: 100% !important; /* 1 column on mobile but still horizontal flow */
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+    
+    .gallery-container .container {
+        overflow: visible;
+    }
+    
+    .gallery-container .fx2 .item {
+        float: none;
+        display: block;
     }
     
     .gallery-container .modal-content {
-        max-width: 98%;
+        max-width: 99% !important;
+        max-height: 99% !important;
     }
     
     .gallery-container .close-button {
-        right: 0px;
-        top: -60px;
+        right: 5px !important;
+        top: 5px !important;
         height: 40px;
         width: 40px;
     }
@@ -601,7 +637,7 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
     }
     
     .gallery-container .modal-image {
-        max-height: 70vh;
+        max-height: 75vh !important;
     }
     
     #isolated-carousel .carousel-slides,
@@ -680,33 +716,32 @@ CHECK GITHUB for working version to revert to ----Replace placeholders, switch f
 </div>
 
 <!-- Content Sections -->
-<p>In the winter of 2022, we had the exciting opportunity to collaborate on visuals for Pearl Jam's 2024 Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
 <br>
-<img src="https://snipboard.io/Gf2r7H.jpg" alt="image showing the sun projected on a screen behind Pearl Jam with text to the right text that reads: 200+ hours
-of 1000 FPS super slow-motion macro footage, real NASA visuals, and archival material combined to create a captivating experience on a 155-foot screen"> 
-<p>The concept for the project was to create something cosmic and awe inspiring, yet human. To bring this vision to life, we developed innovative techniques, including a custom process that allowed Rob Sheridan and his team to paint with light—typically only possible within the realm of still photography—to craft a vast organic cosmic structure for the opening track of the album, “Scared of Fear.”</p>
+<img src="https://snipboard.io/6R3jOh.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam"> 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
 
-<!-- First Carousel -->
+<!-- First Carousel - Fixed with placeholder images -->
 <div id="isolated-carousel">
     <div class="carousel-slides">
         <!-- Slide 1 -->
         <div class="carousel-slide active">
-            <img src="[link]" alt="Image 1">
+            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 1">
         </div>
         
         <!-- Slide 2 -->
         <div class="carousel-slide">
-            <img src="[link]" alt="Image 2">
+            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 2">
         </div>
         
         <!-- Slide 3 -->
         <div class="carousel-slide">
-            <img src="[link]" alt="Image 3">
+            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 3">
         </div>
         
         <!-- Slide 4 -->
         <div class="carousel-slide">
-            <img src="[link]" alt="Image 4">
+            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 4">
         </div>
         
         <!-- Navigation Arrows -->
@@ -731,35 +766,33 @@ Take a glimpse of our process below:
 <br>
 [embedded and centered instagram content 1]
 <br>
-<p>Rob Sheridan envisioned a look that was analog, organic and human rather than the typical sharp aesthetics of concert LED screens. This led us to create a soft, glowing appearance that reflected the feel and texture of film.
-</p>
-<p>We combined over 200 hours of 1000 FPS super slow-motion macro footage, real NASA visuals, and archival material to create a captivating experience projected onto a 155-foot screen.
-</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
 [embedded and centered instagram content 2]
 <br>
 </center>
 
-<!-- Second Carousel -->
+<!-- Second Carousel - Fixed with placeholder images -->
 <div id="isolated-carousel-2">
     <div class="carousel-slides">
         <!-- Slide 1 -->
         <div class="carousel-slide active">
-            <img src="[link]" alt="Image 1">
+            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 1">
         </div>
         
         <!-- Slide 2 -->
         <div class="carousel-slide">
-            <img src="[link]" alt="Image 2">
+            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 2">
         </div>
         
         <!-- Slide 3 -->
         <div class="carousel-slide">
-            <img src="[link]" alt="Image 3">
+            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 3">
         </div>
         
         <!-- Slide 4 -->
         <div class="carousel-slide">
-            <img src="[link]" alt="Image 4">
+            <img src="https://snipboard.io/6R3jOh.jpg" alt="Image 4">
         </div>
         
         <!-- Navigation Arrows -->
@@ -778,9 +811,7 @@ Take a glimpse of our process below:
 
 <br>
 
-<!-- Final Link -->
-<p>[credits placeholder]</p>
-<a href="https://pearljam.com/news/dark-matter-world-tour-2024">Pearl Jam Dark Matter Tour</a>
+<p>Lorem link</p>
 
 <script>
 // Carousel functionality for both carousels
@@ -794,17 +825,29 @@ document.addEventListener('DOMContentLoaded', function() {
     function initCarousel(carouselId) {
         const carousel = document.getElementById(carouselId);
         
-        if (!carousel) return;
+        if (!carousel) {
+            console.log('Carousel not found:', carouselId);
+            return;
+        }
         
         const slides = carousel.querySelectorAll('.carousel-slide');
         const dots = carousel.querySelectorAll('.carousel-dot');
         const prevBtn = carousel.querySelector('.carousel-arrow.prev');
         const nextBtn = carousel.querySelector('.carousel-arrow.next');
         
+        if (slides.length === 0) {
+            console.log('No slides found in carousel:', carouselId);
+            return;
+        }
+        
         let currentSlide = 0;
         const totalSlides = slides.length;
         
         function showSlide(index) {
+            // Ensure index is within bounds
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            
             slides.forEach(slide => {
                 slide.classList.remove('active');
             });
@@ -814,7 +857,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             slides[index].classList.add('active');
-            dots[index].classList.add('active');
+            if (dots[index]) {
+                dots[index].classList.add('active');
+            }
             
             currentSlide = index;
         }
@@ -841,7 +886,9 @@ document.addEventListener('DOMContentLoaded', function() {
         dots.forEach(dot => {
             dot.addEventListener('click', function() {
                 const slideIndex = parseInt(this.getAttribute('data-index'));
-                showSlide(slideIndex);
+                if (!isNaN(slideIndex)) {
+                    showSlide(slideIndex);
+                }
             });
         });
         
@@ -881,6 +928,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+        
+        // Initialize first slide
+        showSlide(0);
     }
 });
 </script>

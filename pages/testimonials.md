@@ -3,19 +3,7 @@ layout: page
 title: Testimonials
 permalink: /testimonials
 ---
-
-<br>
-<p><em>"We were new to shooting videos, Deana and Aster walked us patiently and carefully through the process, beautifully edited our footage and gave us a finished product to be proud of! We especially appreciate how they kept to schedule with such professionalism. We’re excited to work with them again on other projects!"</em>
-<br><b>Diana Horowitz & Amelia Vargas | EastWest Microneedling, LLC </b><br> //www.eastwestmicroneedling.com </p>
-<br>
-<p><em>"Super easy to work with! I loved how our fundraiser video came out."</em>
-<br><b>Carly Stoliker | Development Manager at LAWs </b><br> //www.lcsj.org </p>
-<br>
-<p><em>"Powerful work. Great storytellers."</em>
-<br><b>Craig Zablocki | Keynote & Motivational Speaker </b><br> //craigzablocki.com </p>
-
-<br>
-
+- put widget on top, fix styling so the header isn't changed, make it hold longer text, make it mobile friendly
 <style>
 /* Testimonial CSS Code Start */
 /* background */
@@ -142,3 +130,15 @@ permalink: /testimonials
     <a class="right carousel-control" href="#carousel1" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
   </div>
 </body>
+
+<br>
+<p><em>"We were new to shooting videos, Deana and Aster walked us patiently and carefully through the process, beautifully edited our footage and gave us a finished product to be proud of! We especially appreciate how they kept to schedule with such professionalism. We’re excited to work with them again on other projects!"</em>
+<br><b>Diana Horowitz & Amelia Vargas | EastWest Microneedling, LLC </b><br> //www.eastwestmicroneedling.com </p>
+<br>
+<p><em>"Super easy to work with! I loved how our fundraiser video came out."</em>
+<br><b>Carly Stoliker | Development Manager at LAWs </b><br> //www.lcsj.org </p>
+<br>
+<p><em>"Powerful work. Great storytellers."</em>
+<br><b>Craig Zablocki | Keynote & Motivational Speaker </b><br> //craigzablocki.com </p>
+
+<br>
