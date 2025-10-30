@@ -200,9 +200,13 @@ image: luckynumber.jpg
 Lorem link here!
 <!-- Carousel functionality -->
 <script>
+// Carousel functionality for both carousels
 document.addEventListener('DOMContentLoaded', function() {
-
+    // Initialize first carousel
     initCarousel('isolated-carousel');
+    
+    // Initialize second carousel  
+    initCarousel('isolated-carousel-2');
     
     function initCarousel(carouselId) {
         const carousel = document.getElementById(carouselId);

@@ -372,16 +372,6 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         max-width: 98% !important;
         max-height: 98% !important;
     }
-    
-    #isolated-carousel-2 .carousel-slides {
-        height: 350px;
-    }
-    
-    #isolated-carousel-2 .carousel-arrow {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -426,21 +416,6 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         max-height: 75vh !important;
     }
     
-    #isolated-carousel-2 .carousel-slides {
-        height: 250px;
-        border-radius: 40px; /* Smaller border radius on mobile */
-    }
-    
-    #isolated-carousel-2 .carousel-arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
-    }
-    
-    #isolated-carousel-2 .carousel-dot {
-        width: 12px;
-        height: 12px;
-    }
     
     /* Ensure single image is fully responsive on mobile */
     .content-single-image {
