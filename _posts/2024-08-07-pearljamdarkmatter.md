@@ -7,7 +7,7 @@ tags: [music videos, color grading, editing, visuals]
 image: pjdm-header.jpg
 ---
 
--- find mobile friendly modal opener,  make modals stack no matter what (stops at 481), find old carosel code, replace links and text, hide widgets beyond 250px screen] 
+-- find mobile friendly modal opener,  make modals stack no matter what (stops at 481), mobile responsive carosel, replace links and text, hide widgets beyond 250px screen] 
 <!-- Header Animation -->
 <div class="anim-header-container">
     <div class="anim-image-wrapper">
@@ -124,14 +124,13 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Gallery Styles - Fixed for horizontal stacking with flexbox */
+/* Gallery Styles */
 .gallery-container {
     --gallery-primary-color: #fff;
     --gallery-secondary-color: rgba(0, 0, 0, 0.9);
     --gallery-transition-duration: 0.5s;
     margin-bottom: 40px;
     font-family: 'Montserrat', sans-serif;
-    padding: 20px;
     background: #fff;
 }
 
@@ -441,7 +440,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    gap: 10px;
+    gap: 1px;
     box-sizing: border-box;
 }
 
@@ -506,9 +505,6 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     }
     
     /* Keep horizontal layout on tablet but adjust spacing */
-    .gallery-container .fx2 {
-        gap: 8px !important;
-    }
     
     .gallery-container .close-button {
         right: 10px !important;
@@ -526,41 +522,6 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         bottom: 10px;
         left: 10px;
         width: 80%;
-    }
-    
-    /* Switch to vertical stacking only on very small screens */
-    .gallery-container .fx2 {
-        flex-direction: column !important;
-        gap: 15px !important;
-    }
-    
-    .gallery-container .col4 {
-        flex: none !important;
-        width: 100% !important;
-    }
-    
-    .gallery-container .modal-content {
-        max-width: 99% !important;
-        max-height: 99% !important;
-    }
-    
-    .gallery-container .close-button {
-        right: 5px !important;
-        top: 5px !important;
-        height: 40px;
-        width: 40px;
-    }
-    
-    .gallery-container .close-button:before, 
-    .gallery-container .close-button:after {
-        margin-top: -1.5px;
-        margin-left: -12px;
-        height: 3px;
-        width: 24px;
-    }
-    
-    .gallery-container .modal-image {
-        max-height: 75vh !important;
     }
     
     
