@@ -6,9 +6,6 @@ categories: music videos
 tags: [music videos, color grading, editing, visuals]
 image: pjdm-header.jpg
 ---
-
-find mobile friendly modal opener, mobile size responsive carosel, hide widgets beyond 250px screen] add alt text, replace modal photos (make them same size?) find pj header text original font sizes, fade to black fix, fix instagram embedded posts</p>
-
 <!-- Header Animation -->
 <div class="anim-header-container">
     <div class="anim-image-wrapper">
@@ -21,7 +18,7 @@ find mobile friendly modal opener, mobile size responsive carosel, hide widgets 
 </div>
 
 <!-- Photo credit -->
-<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter-tour/4/thumbs" target="_blank" Rob Sheridan Productions> 
+<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter-tour/4/thumbs" target="_blank"></p>
 
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway|Rozha+One|Montserrat:400,500,600,700&display=swap" rel="stylesheet">
