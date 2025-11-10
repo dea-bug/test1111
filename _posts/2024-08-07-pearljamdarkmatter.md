@@ -438,7 +438,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    gap: 10px;
+    gap: 5px;
     box-sizing: border-box;
 }
 

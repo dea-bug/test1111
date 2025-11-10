@@ -440,7 +440,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    gap: 10 px;
+    gap: 5px;
     box-sizing: border-box;
 }
 
@@ -651,8 +651,19 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 </div>
 
 <br>
+<a href="https://pearljam.com/news/dark-matter-world-tour-2024" target="_blank">
 
-Lorem link here!
+
+  Pearl Jam Dark Matter World Tour 2024
+
+
+</a>
+
+
+<p>
+
+
+find mobile friendly modal opener, mobile size responsive carosel, hide widgets beyond 250px screen] add alt text</p>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
