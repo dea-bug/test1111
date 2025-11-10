@@ -123,7 +123,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     --gallery-primary-color: #fff;
     --gallery-secondary-color: rgba(0, 0, 0, 0.9);
     --gallery-transition-duration: 0.5s;
-    margin-bottom: -5px;
+    margin-bottom: 40px;
     font-family: 'Montserrat', sans-serif;
     background: #fff;
 }
@@ -584,16 +584,17 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 </div>
 
 <!-- Photo credit -->
-<p style="font-size: 0.5rem; color: grey; text-align: right; margin-top: 5px;">
+<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">
 photos + BTS footage by Rob Sheridan Productions
 
 <!-- Content Sections -->
-<p>In the winter of 2022, we had the exciting opportunity to collaborate on visuals for Pearl Jam's 2024 Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<br>
 
 <!-- Responsive Single Image -->
 <img src="https://snipboard.io/6R3jOh.jpg" alt="Content image" class="content-single-image">
 
-<p>The concept for the project was to create something cosmic and awe inspiring, yet human. To bring this vision to life, we developed innovative techniques, including a custom process that allowed Rob Sheridan and his team to paint with light—typically only possible within the realm of still photography—to craft a vast organic cosmic structure for the opening track of the album, “Scared of Fear.”</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
 
 <br>
 
@@ -648,10 +649,11 @@ photos + BTS footage by Rob Sheridan Productions
 </div>
 
 <br>
-<p>
 <a href="https://pearljam.com/news/dark-matter-world-tour-2024" target="_blank">
-Pearl Jam Dark Matter World Tour 2024
-</o>
+
+
+  Pearl Jam Dark Matter World Tour 2024
+
 
 </a>
 
