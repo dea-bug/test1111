@@ -533,6 +533,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 }
 </style>
 
+
 <!-- Gallery Section -->
 <div class="gallery-container">
     <div class="container">
@@ -540,21 +541,21 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
             <!-- Image 1 -->
             <a href="#image1" class="image-link">
                 <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" alt="Gallery image 1">
+                    <img class="transition img-responsive" src="https://joybirdstudios.com/assets/img/Climate-Pledge-Rehearsals.jpg" alt="Gallery image 1">
                 </div>
             </a>
             
             <!-- Image 2 -->
             <a href="#image2" class="image-link">
                 <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" alt="Gallery image 2">
+                    <img class="transition img-responsive" src="https://joybirdstudios.com/assets/img/Climate-Pledge-Rehearsals.jpg" alt="Gallery image 2">
                 </div>
             </a>
             
             <!-- Image 3 -->
             <a href="#image3" class="image-link">
                 <div class="item col4">
-                    <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" alt="Gallery image 3">
+                    <img class="transition img-responsive" src="https://joybirdstudios.com/assets/img/ClimatePledgeRehearsals3.jpg" alt="Gallery image 3">
                 </div>
             </a>
         </div>
@@ -563,7 +564,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         <div class="modal" id="image1">
             <a href="#" class="modal-close"></a>
             <div class="modal-content">
-                <img src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" class="modal-image" alt="Modal image 1">
+                <img src="https://joybirdstudios.com/assets/img/Climate-Pledge-Rehearsals.jpg" class="modal-image" alt="Modal image 1">
                 <a href="#" class="close-button"></a>
             </div>
         </div>
@@ -571,7 +572,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         <div class="modal" id="image2">
             <a href="#" class="modal-close"></a>
             <div class="modal-content">
-                <img src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" class="modal-image" alt="Modal image 2">
+                <img src="https://joybirdstudios.com/assets/img/Climate-Pledge-Rehearsals.jpg" class="modal-image" alt="Modal image 2">
                 <a href="#" class="close-button"></a>
             </div>
         </div>
@@ -579,7 +580,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         <div class="modal" id="image3">
             <a href="#" class="modal-close"></a>
             <div class="modal-content">
-                <img src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" class="modal-image" alt="Modal image 3">
+                <img src="https://joybirdstudios.com/assets/img/ClimatePledgeRehearsals3.jpg" class="modal-image" alt="Modal image 3">
                 <a href="#" class="close-button"></a>
             </div>
         </div>
