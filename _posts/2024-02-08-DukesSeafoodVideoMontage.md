@@ -16,9 +16,6 @@ image: dukes2024.png
         </div>
     </div>
 </div>
-
-<!-- Photo credit -->
-<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by Rob Sheridan Productions>
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway|Rozha+One|Montserrat:400,500,600,700&display=swap" rel="stylesheet">
 
@@ -585,6 +582,10 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         <div id="close"></div>
     </div>
 </div>
+
+<!-- Photo credit -->
+<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">
+photos + BTS footage by Rob Sheridan Productions
 
 <!-- Content Sections -->
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
