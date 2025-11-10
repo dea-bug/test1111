@@ -6,6 +6,25 @@ categories: advertisement
 tags: [color grading, editing]
 image: dukes2024.png
 ---
+
+-- find mobile friendly modal opener,  make modals stack no matter what (stops at 481), mobile responsive carosel, replace links and text, hide widgets beyond 250px screen] 
+<!-- Header Animation -->
+<div class="anim-header-container">
+    <div class="anim-image-wrapper">
+        <img src="https://snipboard.io/xh1kbv.jpg" alt="Animated concert ticket header image"> 
+        <div class="anim-title-container">
+            <span class="anim-title-line">------</span>
+            <span class="anim-title-line">World Tour 2024</span>
+        </div>
+    </div>
+</div>
+
+<!-- Photo credit -->
+<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by ---</p>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway|Rozha+One|Montserrat:400,500,600,700&display=swap" rel="stylesheet">
+
 <style>
 /* Import Montserrat for all paragraph text */
 .post-content p {
@@ -129,7 +148,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     justify-content: space-between !important;
     align-items: stretch !important;
     width: 100% !important;
-    gap: 1px !important;
+    gap: 10px !important;
 }
 
 .gallery-container .col4 {
@@ -421,7 +440,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    gap: 10px;
+    gap: 1px;
     box-sizing: border-box;
 }
 
@@ -514,11 +533,37 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 }
 </style>
 
-     <!-- Gallery Modals -->
+<!-- Gallery Section -->
+<div class="gallery-container">
+    <div class="container">
+        <div class="fx2">
+            <!-- Image 1 -->
+            <a href="#image1" class="image-link">
+                <div class="item col4">
+                    <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" alt="Gallery image 1">
+                </div>
+            </a>
+            
+            <!-- Image 2 -->
+            <a href="#image2" class="image-link">
+                <div class="item col4">
+                    <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" alt="Gallery image 2">
+                </div>
+            </a>
+            
+            <!-- Image 3 -->
+            <a href="#image3" class="image-link">
+                <div class="item col4">
+                    <img class="transition img-responsive" src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" alt="Gallery image 3">
+                </div>
+            </a>
+        </div>
+
+        <!-- Gallery Modals -->
         <div class="modal" id="image1">
             <a href="#" class="modal-close"></a>
             <div class="modal-content">
-                <img src="https://joybirdstudios.com/assets/img/Climate-Pledge-Rehearsals.jpg" class="modal-image" alt="Modal image 1">
+                <img src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" class="modal-image" alt="Modal image 1">
                 <a href="#" class="close-button"></a>
             </div>
         </div>
@@ -526,7 +571,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         <div class="modal" id="image2">
             <a href="#" class="modal-close"></a>
             <div class="modal-content">
-                <img src="https://joybirdstudios.com/assets/img/Climate-Pledge-Rehearsals.jpg" class="modal-image" alt="Modal image 2">
+                <img src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" class="modal-image" alt="Modal image 2">
                 <a href="#" class="close-button"></a>
             </div>
         </div>
@@ -534,7 +579,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         <div class="modal" id="image3">
             <a href="#" class="modal-close"></a>
             <div class="modal-content">
-                <img src="https://joybirdstudios.com/assets/img/ClimatePledgeRehearsals3.jpg" class="modal-image" alt="Modal image 3">
+                <img src="https://images.pexels.com/photos/33915754/pexels-photo-33915754.jpeg" class="modal-image" alt="Modal image 3">
                 <a href="#" class="close-button"></a>
             </div>
         </div>
@@ -542,3 +587,167 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         <div id="close"></div>
     </div>
 </div>
+
+<!-- Content Sections -->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<br>
+
+<!-- Responsive Single Image -->
+<img src="https://snipboard.io/6R3jOh.jpg" alt="Content image" class="content-single-image">
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+
+<br>
+
+<!-- More Content -->
+<center>
+<p>Take a glimpse of our process below:</p>
+<br>
+[embedded and centered instagram content 1]
+</center>
+<br>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<center>
+[embedded and centered instagram content 2]
+</center>
+<br>
+<!-- Carousel -->
+<div id="isolated-carousel">
+    <div class="carousel-slides">
+        <!-- Slide 1 -->
+        <div class="carousel-slide active">
+            <img src="[link]" alt="Image 1">
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 2">
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 3">
+        </div>
+        
+        <!-- Slide 4 -->
+        <div class="carousel-slide">
+            <img src="[link]" alt="Image 4">
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow prev">&#10094;</button>
+        <button class="carousel-arrow next">&#10095;</button>
+    </div>
+    
+    <!-- Dots Indicator -->
+    <div class="carousel-dots">
+        <span class="carousel-dot active" data-index="0"></span>
+        <span class="carousel-dot" data-index="1"></span>
+        <span class="carousel-dot" data-index="2"></span>
+        <span class="carousel-dot" data-index="3"></span>
+    </div>
+</div>
+
+<br>
+
+Lorem link here!
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    initCarousel('isolated-carousel');
+    
+    function initCarousel(carouselId) {
+        const carousel = document.getElementById(carouselId);
+        
+        if (!carousel) return;
+        
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dots = carousel.querySelectorAll('.carousel-dot');
+        const prevBtn = carousel.querySelector('.carousel-arrow.prev');
+        const nextBtn = carousel.querySelector('.carousel-arrow.next');
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        
+        function showSlide(index) {
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            
+            currentSlide = index;
+        }
+        
+        function nextSlide() {
+            let nextIndex = currentSlide + 1;
+            if (nextIndex >= totalSlides) {
+                nextIndex = 0;
+            }
+            showSlide(nextIndex);
+        }
+        
+        function prevSlide() {
+            let prevIndex = currentSlide - 1;
+            if (prevIndex < 0) {
+                prevIndex = totalSlides - 1;
+            }
+            showSlide(prevIndex);
+        }
+        
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const slideIndex = parseInt(this.getAttribute('data-index'));
+                showSlide(slideIndex);
+            });
+        });
+        
+        // Auto-advance slides
+        let slideInterval = setInterval(nextSlide, 5000);
+        
+        const carouselSlides = carousel.querySelector('.carousel-slides');
+        if (carouselSlides) {
+            carouselSlides.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            carouselSlides.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+            
+            // Touch swipe support
+            let startX = 0;
+            let endX = 0;
+            
+            carouselSlides.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            carouselSlides.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                
+                if (startX - endX > swipeThreshold) {
+                    nextSlide();
+                } else if (endX - startX > swipeThreshold) {
+                    prevSlide();
+                }
+            }
+        }
+    }
+});
+</script>
