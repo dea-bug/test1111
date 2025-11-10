@@ -163,12 +163,12 @@ image: luckynumber.jpg
     <div class="carousel-slides">
         <!-- Slide 1 -->
         <div class="carousel-slide active">
-            <img src="[link]" alt="Image 1">
+            <img src="https://joybirdstudios.com/assets/img/Vancouver-BC-II.jpg" alt="Image 1">
         </div>
         
         <!-- Slide 2 -->
         <div class="carousel-slide">
-            <img src="[link]" alt="Image 2">
+            <img src="https://joybirdstudios.com/assets/img/ClimatePledgeRehearsals2 .jpg" alt="Image 2">
         </div>
         
         <!-- Slide 3 -->
@@ -197,7 +197,10 @@ image: luckynumber.jpg
 
 <br>
 
-Lorem link here!
+<a href="https://pearljam.com/news/dark-matter-world-tour-2024" target="_blank">
+  Pearl Jam Dark Matter World Tour 2024
+</a>
+<p>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
