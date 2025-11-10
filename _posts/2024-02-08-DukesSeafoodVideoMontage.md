@@ -6,22 +6,19 @@ categories: advertisement
 tags: [color grading, editing]
 image: dukes2024.png
 ---
-
--- find mobile friendly modal opener,  make modals stack no matter what (stops at 481), mobile responsive carosel, replace links and text, hide widgets beyond 250px screen] 
 <!-- Header Animation -->
 <div class="anim-header-container">
     <div class="anim-image-wrapper">
-        <img src="https://snipboard.io/xh1kbv.jpg" alt="Animated concert ticket header image"> 
+        <img src="https://joybirdstudios.com/assets/img/darkmatter-header.jpg" alt="Animated concert ticket header image for Pearl Jam Dark Matter tour visuals"> 
         <div class="anim-title-container">
-            <span class="anim-title-line">------</span>
+            <span class="anim-title-line">Pearl Jam</span>
             <span class="anim-title-line">World Tour 2024</span>
         </div>
     </div>
 </div>
 
 <!-- Photo credit -->
-<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by ---</p>
-
+<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter-tour/4/thumbs" target="_blank" Lorem Link>
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway|Rozha+One|Montserrat:400,500,600,700&display=swap" rel="stylesheet">
 
@@ -440,7 +437,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    gap: 5px;
+    gap: 10px;
     box-sizing: border-box;
 }
 
@@ -662,8 +659,6 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 
 <p>
 
-
-find mobile friendly modal opener, mobile size responsive carosel, hide widgets beyond 250px screen] add alt text</p>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
