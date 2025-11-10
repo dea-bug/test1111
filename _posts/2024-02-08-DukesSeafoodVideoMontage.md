@@ -123,7 +123,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     --gallery-primary-color: #fff;
     --gallery-secondary-color: rgba(0, 0, 0, 0.9);
     --gallery-transition-duration: 0.5s;
-    margin-bottom: 40px;
+    margin-bottom: -5px;
     font-family: 'Montserrat', sans-serif;
     background: #fff;
 }
@@ -584,17 +584,16 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 </div>
 
 <!-- Photo credit -->
-<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">
+<p style="font-size: 0.5rem; color: grey; text-align: right; margin-top: 5px;">
 photos + BTS footage by Rob Sheridan Productions
 
 <!-- Content Sections -->
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
-<br>
+<p>In the winter of 2022, we had the exciting opportunity to collaborate on visuals for Pearl Jam's 2024 Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
 
 <!-- Responsive Single Image -->
 <img src="https://snipboard.io/6R3jOh.jpg" alt="Content image" class="content-single-image">
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<p>The concept for the project was to create something cosmic and awe inspiring, yet human. To bring this vision to life, we developed innovative techniques, including a custom process that allowed Rob Sheridan and his team to paint with light—typically only possible within the realm of still photography—to craft a vast organic cosmic structure for the opening track of the album, “Scared of Fear.”</p>
 
 <br>
 
@@ -605,8 +604,8 @@ photos + BTS footage by Rob Sheridan Productions
 [embedded and centered instagram content 1]
 </center>
 <br>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<p>Rob Sheridan envisioned a look that was analog, organic and human rather than the typical sharp aesthetics of concert LED screens. This led us to create a soft, glowing appearance that reflected the feel and texture of film.</p>
+<p>We combined over 200 hours of 1000 FPS super slow-motion macro footage, real NASA visuals, and archival material to create a captivating experience projected onto a 155-foot screen.</p>
 <center>
 [embedded and centered instagram content 2]
 </center>
@@ -649,11 +648,10 @@ photos + BTS footage by Rob Sheridan Productions
 </div>
 
 <br>
+<p>
 <a href="https://pearljam.com/news/dark-matter-world-tour-2024" target="_blank">
-
-
-  Pearl Jam Dark Matter World Tour 2024
-
+Pearl Jam Dark Matter World Tour 2024
+</o>
 
 </a>
 
