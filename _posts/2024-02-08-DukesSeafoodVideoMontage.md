@@ -651,7 +651,7 @@ photos + BTS footage by Rob Sheridan Productions
 <p>
 <a href="https://pearljam.com/news/dark-matter-world-tour-2024" target="_blank">
 Pearl Jam Dark Matter World Tour 2024
-</o>
+</p>
 
 </a>
 
