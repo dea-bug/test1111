@@ -148,7 +148,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     justify-content: space-between !important;
     align-items: stretch !important;
     width: 100% !important;
-    gap: 10px !important;
+    gap: 1px !important;
 }
 
 .gallery-container .col4 {
@@ -440,7 +440,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    gap: 1px;
+    gap: 10 px;
     box-sizing: border-box;
 }
 
