@@ -123,7 +123,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     --gallery-primary-color: #fff;
     --gallery-secondary-color: rgba(0, 0, 0, 0.9);
     --gallery-transition-duration: 0.5s;
-    margin-bottom: 40px;
+    margin-bottom: -5px;
     font-family: 'Montserrat', sans-serif;
     background: #fff;
 }
@@ -584,7 +584,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 </div>
 
 <!-- Photo credit -->
-<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">
+<p style="font-size: 0.5rem; color: grey; text-align: right; margin-top: 5px;">
 photos + BTS footage by Rob Sheridan Productions
 
 <!-- Content Sections -->
