@@ -7,6 +7,215 @@ tags: [color grading, editing]
 image: dukes2024.png
 ---
 <style>
+/* Import Montserrat for all paragraph text */
+.post-content p {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Force Montserrat on all regular paragraphs */
+p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Header Animation Styles */
+.anim-header-container {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.anim-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 33.33%;
+    background-color: #222;
+}
+
+.anim-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.anim-title-container {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 75%;
+    max-width: 975px;
+    font-family: 'Anton', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.anim-title-line {
+    display: block;
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 5px;
+    opacity: 0;
+    transform: translateY(80%);
+    animation: anim-lineUp 3s ease-out forwards;
+}
+
+.anim-title-line:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.anim-title-line:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/* Responsive single image in content section */
+.content-single-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Styles */
+.gallery-container {
+    --gallery-primary-color: #fff;
+    --gallery-secondary-color: rgba(0, 0, 0, 0.9);
+    --gallery-transition-duration: 0.5s;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+}
+
+.gallery-container .container {
+    width: 100% !important;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* Use flexbox for horizontal stacking */
+.gallery-container .fx2 {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 1px !important;
+}
+
+.gallery-container .col4 {
+    flex: 1 !important;
+    min-width: 0 !important; /* Allow flex items to shrink */
+    position: relative;
+    box-sizing: border-box;
+}
+
+.gallery-container .transition {
+    transition: all var(--gallery-transition-duration) ease;
+}
+
+.gallery-container .fx2 .item {
+    margin: 0 !important;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-container .fx2 .item img {
+    padding: 0 !important;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* Ensure consistent sizing */
+}
+
+.gallery-container .fx2 .image-link:hover .item img,
+.gallery-container .fx2 .image-link:focus .item img {
+    opacity: 0.9;
+    transform: scale(0.95);
+}
+
+.gallery-container .fx2 h4,
+.gallery-container .fx2 p {
+    transition: all var(--gallery-transition-duration) ease;
+}
+
+.gallery-container .fx2 .image-link .item h4 {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    color: var(--gallery-primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 42%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    filter: blur(5px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.gallery-container .fx2 .image-link:hover .item h4,
+.gallery-container .fx2 .image-link:focus .item h4 {
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.gallery-container .fx2 .image-link .item p {
+    font-family: "Raleway", sans-serif;
+    font-size: 8px;
+    color: var(--gallery-primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 53%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.gallery-container .fx2 .image-link:hover .item p,
+.gallery-container .fx2 .image-link:focus .item p {
+    opacity: 1;
+}
 
 /* Modal Styles - Made larger for readability */
 .gallery-container .modal {
@@ -114,6 +323,194 @@ image: dukes2024.png
 
 .gallery-container #close {
     display: none;
+}
+
+/* Carousel Styles */
+
+#isolated-carousel {
+    all: initial;
+    display: block;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#isolated-carousel .carousel-slides {
+    all: initial;
+    display: block;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 80px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+#isolated-carousel .carousel-slide {
+    all: initial;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+#isolated-carousel .carousel-slide.active {
+    opacity: 1;
+}
+
+#isolated-carousel .carousel-slide img {
+    all: initial;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+#isolated-carousel .carousel-arrow {
+    all: initial;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    z-index: 10;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#isolated-carousel .carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#isolated-carousel .carousel-arrow.prev {
+    left: 15px;
+}
+
+#isolated-carousel .carousel-arrow.next {
+    right: 15px;
+}
+
+#isolated-carousel .carousel-dots {
+    all: initial;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+#isolated-carousel .carousel-dot {
+    all: initial;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+#isolated-carousel .carousel-dot.active {
+    background-color: #333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    
+    #isolated-carousel .carousel-slides {
+        height: 350px;
+    }
+    
+    #isolated-carousel .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #isolated-carousel .carousel-slides {
+        height: 250px;
+    }
+    
+    #isolated-carousel .carousel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+    
+    #isolated-carousel .carousel-dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+
+/* Mobile Responsiveness with horizontal gallery fix */
+@media (max-width: 768px) {
+    .anim-title-container {
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .anim-title-line {
+        margin-bottom: 3px;
+    }
+    
+    /* Keep horizontal layout on tablet but adjust spacing */
+    
+    .gallery-container .close-button {
+        right: 10px !important;
+        top: 10px !important;
+    }
+    
+    .gallery-container .modal-content {
+        max-width: 98% !important;
+        max-height: 98% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .anim-title-container {
+        bottom: 10px;
+        left: 10px;
+        width: 80%;
+    }
+    
+    
+    /* Ensure single image is fully responsive on mobile */
+    .content-single-image {
+        max-width: 100% !important;
+        height: auto !important;
+    }
 }
 </style>
 
