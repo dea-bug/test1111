@@ -18,7 +18,7 @@ image: dukes2024.png
 </div>
 
 <!-- Photo credit -->
-<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by <a href="https://www.rob-sheridan.com/pearl-jam-2024/dark-matter-tour/4/thumbs" target="_blank" Lorem Link>
+<p style="font-size: 12px; color: grey; text-align: right; margin-top: 5px;">photos + BTS footage by Rob Sheridan Productions>
 <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway|Rozha+One|Montserrat:400,500,600,700&display=swap" rel="stylesheet">
 
