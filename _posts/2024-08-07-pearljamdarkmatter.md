@@ -496,7 +496,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 </div>
 
 <!-- Photo credit -->
-<p style="font-size: 0.5rem; color: grey; text-align: right; margin-top: 5px;">
+<p style="font-size: 0.5rem; color: grey; text-align: right; margin-top: 5px; white-space: nowrap;">
 photos + BTS footage by Rob Sheridan Productions
 
 <!-- Content Sections -->
