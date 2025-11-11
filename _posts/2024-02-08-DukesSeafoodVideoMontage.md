@@ -588,7 +588,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 photos + BTS footage by Rob Sheridan Productions
 
 <!-- Content Sections -->
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<p>In the winter of 2022, we had the exciting opportunity to collaborate on visuals for Pearl Jam's 2024 Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
 <br>
 
 <!-- Responsive Single Image -->
