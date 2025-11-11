@@ -606,7 +606,7 @@ photos + BTS footage by Rob Sheridan Productions
 </center>
 <br>
 <p>Rob Sheridan envisioned a look that was analog, organic and human rather than the typical sharp aesthetics of concert LED screens. This led us to create a soft, glowing appearance that reflected the feel and texture of film.</p>
-<p>We combined over 200 hours of 1000 FPS super slow-motion macro footage, real NASA visuals, and archival material to create a captivating experience projected onto a 155-foot screen.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
 <center>
 [embedded and centered instagram content 2]
 </center>
