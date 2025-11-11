@@ -594,7 +594,7 @@ photos + BTS footage by Rob Sheridan Productions
 <!-- Responsive Single Image -->
 <img src="https://snipboard.io/6R3jOh.jpg" alt="Content image" class="content-single-image">
 
-<p>The concept for the project was to create something cosmic and awe inspiring, yet human. To bring this vision to life, we developed innovative techniques, including a custom process that allowed Rob Sheridan and his team to paint with light—typically only possible within the realm of still photography—to craft a vast organic cosmic structure for the opening track of the album, “Scared of Fear.”</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
 
 <br>
 
