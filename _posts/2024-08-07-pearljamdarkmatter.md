@@ -284,7 +284,6 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -415,7 +414,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
     
     .gallery-container .close-button {
         right: 10px !important;
-        top: 10px !important;
+        top: -60px !important;
     }
     
     .gallery-container .modal-content {
@@ -506,7 +505,7 @@ photos + BTS footage by Rob Sheridan Productions
 <!-- Responsive Single Image -->
 <img src="https://snipboard.io/6R3jOh.jpg" alt="Content image" class="content-single-image">
 
-<p>The concept for the project was to create something cosmic and awe inspiring, yet human. To bring this vision to life, we developed innovative techniques, including a custom process that allowed Rob Sheridan and his team to paint with light&mdash;typically only possible within the realm of still photography&mdash;to craft a vast organic cosmic structure for the opening track of the album, &ldquo;Scared of Fear.&rdquo;</p>
+<p>The concept for the project was to create something cosmic and awe inspiring, yet human. To bring this vision to life, we developed innovative techniques, including a custom process that allowed us to paint with light&mdash;typically only possible within the realm of still photography&mdash;to craft a vast organic cosmic structure for the opening track of the album, &ldquo;Scared of Fear.&rdquo;</p>
 
 <!-- More Content -->
 <br>
@@ -530,12 +529,12 @@ photos + BTS footage by Rob Sheridan Productions
     <div class="carousel-slides">
         <!-- Slide 1 -->
         <div class="carousel-slide active">
-            <img src="[link]" alt="Image 1">
+            <img src="//joybirdstudios.com/assets/img/Vancouver-BC-II.jpg" alt="Image 1">
         </div>
         
         <!-- Slide 2 -->
         <div class="carousel-slide">
-            <img src="[link]" alt="Image 2">
+            <img src="//joybirdstudios.com/assets/img/ClimatePledgeRehearsals2 .jpg" alt="Image 2">
         </div>
         
         <!-- Slide 3 -->
