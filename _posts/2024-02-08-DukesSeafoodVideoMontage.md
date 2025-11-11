@@ -589,7 +589,6 @@ photos + BTS footage by Rob Sheridan Productions
 
 <!-- Content Sections -->
 <p>In the winter of 2022, we had the exciting opportunity to collaborate on visuals for Pearl Jam's 2024 Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
-<br>
 
 <!-- Responsive Single Image -->
 <img src="https://snipboard.io/6R3jOh.jpg" alt="Content image" class="content-single-image">
@@ -603,8 +602,8 @@ photos + BTS footage by Rob Sheridan Productions
 [embedded and centered instagram content 1]
 </center>
 <br>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis lectus nulla at volutpat diam</p>
+<p>Rob Sheridan envisioned a look that was analog, organic and human rather than the typical sharp aesthetics of concert LED screens. This led us to create a soft, glowing appearance that reflected the feel and texture of film.</p>
+<p>We combined over 200 hours of 1000 FPS super slow-motion macro footage, real NASA visuals, and archival material to create a captivating experience projected onto a 155-foot screen.</p>
 <center>
 [embedded and centered instagram content 2]
 </center>
