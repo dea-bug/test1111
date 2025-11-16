@@ -24,7 +24,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 .anim-header-container {
     position: relative;
     width: 100%;
-    height: 500px; /* Fixed height as requested */
+    height: 182px;
     margin: 0 auto;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -127,9 +127,6 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 }
 
 @media (max-width: 768px) {
-    .anim-header-container {
-        height: 400px; /* Slightly shorter on mobile */
-    }
     
     .anim-title-line {
         font-size: 20px; /* Smaller on mobile */
@@ -144,10 +141,6 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 }
 
 @media (max-width: 480px) {
-    .anim-header-container {
-        height: 350px; /* Even shorter on very small screens */
-    }
-    
     .anim-title-line {
         font-size: 18px; /* Even smaller on very small screens */
         margin-bottom: 3px;
