@@ -21,135 +21,14 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 }
 
 /* Responsive NASA sun image in content section */
-.anim-header-container {
-    position: relative;
+.content-single-image {
     width: 100%;
-    height: 182px;
-    margin: 0 auto;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Fixed height image container */
-.anim-image-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: #000; /* Black background for fade effect */
-}
-
-.anim-image-wrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    animation: fadeInImage 2.5s ease-in-out forwards;
-    animation-delay: 0.3s;
-}
-
-/* Text container */
-.anim-title-container {
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    width: auto;
-    max-width: 80%;
-    font-family: 'Anton', sans-serif;
-    color: white;
-    text-transform: uppercase;
-    text-align: left;
-    overflow: visible;
-}
-
-/* Text lines with fixed size */
-.anim-title-line {
+    max-width: 100%;
+    height: auto;
     display: block;
-    font-size: 26px; /* Fixed 26px as requested */
-    letter-spacing: -0.5px;
-    line-height: 1.1;
-    margin-bottom: 5px;
-    opacity: 0;
-    transform: translateY(80%);
-    white-space: nowrap;
-    animation: anim-lineUp 2.5s ease-out forwards;
-}
-
-/* Animation delays for each line */
-.anim-title-line:nth-child(1) { animation-delay: 0.5s; }
-.anim-title-line:nth-child(2) { animation-delay: 0.8s; }
-.anim-title-line:nth-child(3) { animation-delay: 1.1s; }
-.anim-title-line:nth-child(4) { animation-delay: 1.4s; }
-.anim-title-line:nth-child(5) { animation-delay: 1.7s; }
-.anim-title-line:nth-child(6) { animation-delay: 2.0s; }
-
-/* Text animation keyframes */
-@keyframes anim-lineUp {
-    0% {
-        opacity: 0;
-        transform: translateY(80%);
-    }
-    20% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-
-/* Image fade-in animation */
-@keyframes fadeInImage {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .anim-title-line {
-        font-size: 22px; /* Slightly smaller on tablets */
-    }
-    
-    .anim-title-container {
-        bottom: 30px;
-        left: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    
-    .anim-title-line {
-        font-size: 20px; /* Smaller on mobile */
-        white-space: normal; /* Allow wrapping on mobile */
-    }
-    
-    .anim-title-container {
-        bottom: 20px;
-        left: 20px;
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .anim-title-line {
-        font-size: 18px; /* Even smaller on very small screens */
-        margin-bottom: 3px;
-    }
-    
-    .anim-title-container {
-        bottom: 15px;
-        left: 15px;
-    }
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Gallery Styles */
@@ -550,6 +429,13 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         left: 10px;
         width: 80%;
     }
+    
+    
+    /* Ensure single image is fully responsive on mobile */
+    .content-single-image {
+        max-width: 100% !important;
+        height: auto !important;
+    }
 }
 </style>
 
@@ -616,20 +502,8 @@ photos + BTS footage by Rob Sheridan Productions
 <!-- Content Sections -->
 <p>In the winter of 2022, we had the exciting opportunity to collaborate on visuals for Pearl Jam's 2024 Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
 
-<!-- Responsive Pull Quote -->
-<div class="anim-header-container">
-    <div class="anim-image-wrapper">
-        <img src="https://snipboard.io/6ip3aK.jpg" alt="pull quote image"> 
-        <div class="anim-title-container">
-            <span class="anim-title-line">"200+ hours of 1000 FPS</span>
-            <span class="anim-title-line">super slow-motion macro footage,</span>
-            <span class="anim-title-line">real NASA visuals, and archival</span>
-            <span class="anim-title-line">material combined to create</span>
-            <span class="anim-title-line">a captivating experience</span>
-            <span class="anim-title-line">on a 155-foot screen"</span>
-        </div>
-    </div>
-</div>
+<!-- Responsive Single Image -->
+<img src="https://snipboard.io/6ip3aK.jpg" alt="Content image" class="content-single-image">
 
 <p>The concept for the project was to create something cosmic and awe inspiring, yet human. To bring this vision to life we developed <span style="color: #0000ff;"><a title="View on Instagram" href="https://www.instagram.com/reel/DAJYEZZPrTB/?utm_source=ig_web_copy_link&amp;igsh=NTc4MTIwNjQ2YQ==" target="_blank">innovative techniques</a></span> including a custom process that allowed us to paint with light&mdash;typically only possible within the realm of still photography&mdash;to craft a vast organic cosmic structure for the opening track of the album, &ldquo;Scared of Fear.&rdquo;</p>
 
