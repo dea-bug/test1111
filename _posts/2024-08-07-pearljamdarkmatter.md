@@ -21,125 +21,143 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 }
 
 /* Responsive NASA sun image in content section */
-.split-container {
-            display: flex;
-            height: 500px; /* Fixed height as requested */
-            width: 100%;
-        }
+.anim-header-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Fixed height as requested */
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
-        .text-side {
-            flex: 1;
-            background-color: #161616;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
-            position: relative;
-        }
+/* Fixed height image container */
+.anim-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Black background for fade effect */
+}
 
-        .image-side {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
-            background-color: #000; /* Black background for fade effect */
-        }
+.anim-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fadeInImage 2.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
 
-        .image-side img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            animation: fadeInImage 2s ease-in-out forwards;
-            animation-delay: 0.5s;
-        }
+/* Text container */
+.anim-title-container {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: auto;
+    max-width: 80%;
+    font-family: 'Anton', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: left;
+    overflow: visible;
+}
 
-        .text-content {
-            color: white;
-            text-transform: uppercase;
-            max-width: 90%;
-        }
+/* Text lines with fixed size */
+.anim-title-line {
+    display: block;
+    font-size: 26px; /* Fixed 26px as requested */
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    margin-bottom: 5px;
+    opacity: 0;
+    transform: translateY(80%);
+    white-space: nowrap;
+    animation: anim-lineUp 2.5s ease-out forwards;
+}
 
-        .text-line {
-            display: block;
-            font-size: 26px; /* Fixed 26px as requested */
-            line-height: 1.1;
-            margin-bottom: 8px;
-            opacity: 0;
-            transform: translateX(-50px);
-            animation: slideIn 1s ease-out forwards;
-            white-space: nowrap;
-        }
+/* Animation delays for each line */
+.anim-title-line:nth-child(1) { animation-delay: 0.5s; }
+.anim-title-line:nth-child(2) { animation-delay: 0.8s; }
+.anim-title-line:nth-child(3) { animation-delay: 1.1s; }
+.anim-title-line:nth-child(4) { animation-delay: 1.4s; }
+.anim-title-line:nth-child(5) { animation-delay: 1.7s; }
+.anim-title-line:nth-child(6) { animation-delay: 2.0s; }
 
-        /* Animation delays */
-        .text-line:nth-child(1) { animation-delay: 0.2s; }
-        .text-line:nth-child(2) { animation-delay: 0.4s; }
-        .text-line:nth-child(3) { animation-delay: 0.6s; }
-        .text-line:nth-child(4) { animation-delay: 0.8s; }
-        .text-line:nth-child(5) { animation-delay: 1.0s; }
-        .text-line:nth-child(6) { animation-delay: 1.2s; }
+/* Text animation keyframes */
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
 
-        @keyframes slideIn {
-            0% {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
+/* Image fade-in animation */
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
-        @keyframes fadeInImage {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .anim-title-line {
+        font-size: 22px; /* Slightly smaller on tablets */
+    }
+    
+    .anim-title-container {
+        bottom: 30px;
+        left: 30px;
+    }
+}
 
-        /* Responsive adjustments */
-        @media (max-width: 1024px) {
-            .text-line {
-                font-size: 22px; /* Slightly smaller on tablets */
-            }
-        }
+@media (max-width: 768px) {
+    .anim-header-container {
+        height: 400px; /* Slightly shorter on mobile */
+    }
+    
+    .anim-title-line {
+        font-size: 20px; /* Smaller on mobile */
+        white-space: normal; /* Allow wrapping on mobile */
+    }
+    
+    .anim-title-container {
+        bottom: 20px;
+        left: 20px;
+        max-width: 90%;
+    }
+}
 
-        @media (max-width: 768px) {
-            .split-container {
-                flex-direction: column;
-                height: auto; /* Allow height to adjust on mobile */
-                min-height: 800px; /* Set minimum height for mobile */
-            }
-            
-            .text-side, .image-side {
-                flex: none;
-                height: 400px; /* Fixed height for each section on mobile */
-            }
-            
-            .text-content {
-                text-align: center;
-            }
-            
-            .text-line {
-                white-space: normal;
-                font-size: 20px; /* Smaller on mobile */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .text-side {
-                padding: 20px;
-            }
-            
-            .text-line {
-                margin-bottom: 5px;
-                font-size: 18px; /* Even smaller on very small screens */
-            }
-        }
+@media (max-width: 480px) {
+    .anim-header-container {
+        height: 350px; /* Even shorter on very small screens */
+    }
+    
+    .anim-title-line {
+        font-size: 18px; /* Even smaller on very small screens */
+        margin-bottom: 3px;
+    }
+    
+    .anim-title-container {
+        bottom: 15px;
+        left: 15px;
+    }
+}
 
 /* Gallery Styles */
 .gallery-container {
@@ -539,13 +557,6 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         left: 10px;
         width: 80%;
     }
-    
-    
-    /* Ensure single image is fully responsive on mobile */
-    .content-single-image {
-        max-width: 100% !important;
-        height: auto !important;
-    }
 }
 </style>
 
@@ -613,21 +624,19 @@ photos + BTS footage by Rob Sheridan Productions
 <p>In the winter of 2022, we had the exciting opportunity to collaborate on visuals for Pearl Jam's 2024 Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
 
 <!-- Responsive Pull Quote -->
-   <div class="split-container">
-        <div class="text-side">
-            <div class="text-content">
-                <span class="text-line">"200+ hours of 1000 FPS</span>
-                <span class="text-line">super slow-motion macro footage,</span>
-                <span class="text-line">real NASA visuals, and archival</span>
-                <span class="text-line">material combined to create</span>
-                <span class="text-line">a captivating experience</span>
-                <span class="text-line">on a 155-foot screen"</span>
-            </div>
-        </div>
-        <div class="image-side">
-            <img src="https://snipboard.io/cnrRiq.jpg" alt="Visual content">
+<div class="anim-header-container">
+    <div class="anim-image-wrapper">
+        <img src="https://snipboard.io/6ip3aK.jpg" alt="pull quote image"> 
+        <div class="anim-title-container">
+            <span class="anim-title-line">"200+ hours of 1000 FPS</span>
+            <span class="anim-title-line">super slow-motion macro footage,</span>
+            <span class="anim-title-line">real NASA visuals, and archival</span>
+            <span class="anim-title-line">material combined to create</span>
+            <span class="anim-title-line">a captivating experience</span>
+            <span class="anim-title-line">on a 155-foot screen"</span>
         </div>
     </div>
+</div>
 
 <p>The concept for the project was to create something cosmic and awe inspiring, yet human. To bring this vision to life we developed <span style="color: #0000ff;"><a title="View on Instagram" href="https://www.instagram.com/reel/DAJYEZZPrTB/?utm_source=ig_web_copy_link&amp;igsh=NTc4MTIwNjQ2YQ==" target="_blank">innovative techniques</a></span> including a custom process that allowed us to paint with light&mdash;typically only possible within the realm of still photography&mdash;to craft a vast organic cosmic structure for the opening track of the album, &ldquo;Scared of Fear.&rdquo;</p>
 
