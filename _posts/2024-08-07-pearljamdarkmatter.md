@@ -429,21 +429,21 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
             <!-- Image 1 -->
             <a href="#image1" class="image-link">
                 <div class="item col4">
-                    <img class="transition img-responsive" src="//joybirdstudios.com/assets/img/Chicago%20Wrigley%20II.jpg" alt="Pearl Jam Dark Matter Tour at Chicago Wrigley - Nebula Dark">
+                    <img class="transition img-responsive" src="{{site.baseurl}}/assets/img/Chicago%20Wrigley%20II.jpg" alt="Pearl Jam Dark Matter Tour at Chicago Wrigley - Nebula Dark">
                 </div>
             </a>
             
             <!-- Image 2 -->
             <a href="#image2" class="image-link">
                 <div class="item col4">
-                    <img class="transition img-responsive" src="//joybirdstudios.com/assets/img/Climate-Pledge-Rehearsals.jpg" alt="Pearl Jam Dark Matter Tour at Climate Pledge Rehearsals - Crown of Light part 1">
+                    <img class="transition img-responsive" src="{{site.baseurl}}/assets/img/Climate-Pledge-Rehearsals.jpg" alt="Pearl Jam Dark Matter Tour at Climate Pledge Rehearsals - Crown of Light part 1">
                 </div>
             </a>
             
             <!-- Image 3 -->
             <a href="#image3" class="image-link">
                 <div class="item col4">
-                    <img class="transition img-responsive" src="//joybirdstudios.com/assets/img/ClimatePledgeRehearsals3.jpg" alt="Pearl Jam Dark Matter Tour at Climate Pledge Rehearsals - Gold Ripples">
+                    <img class="transition img-responsive" src="{{site.baseurl}}/assets/img/ClimatePledgeRehearsals3.jpg" alt="Pearl Jam Dark Matter Tour at Climate Pledge Rehearsals - Gold Ripples">
                 </div>
             </a>
         </div>
@@ -452,7 +452,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         <div class="modal" id="image1">
             <a href="#" class="modal-close"></a>
             <div class="modal-content">
-                <img src="//joybirdstudios.com/assets/img/Climate-Pledge-Rehearsals.jpg" class="modal-image" alt="Modal image 1">
+                <img src="{{site.baseurl}}/assets/img/Climate-Pledge-Rehearsals.jpg" class="modal-image" alt="Modal image 1">
                 <a href="#" class="close-button"></a>
             </div>
         </div>
@@ -460,7 +460,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         <div class="modal" id="image2">
             <a href="#" class="modal-close"></a>
             <div class="modal-content">
-                <img src="//joybirdstudios.com/assets/img/Climate-Pledge-Rehearsals.jpg" class="modal-image" alt="Modal image 2">
+                <img src="{{site.baseurl}}/assets/img/Climate-Pledge-Rehearsals.jpg" class="modal-image" alt="Modal image 2">
                 <a href="#" class="close-button"></a>
             </div>
         </div>
@@ -468,7 +468,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
         <div class="modal" id="image3">
             <a href="#" class="modal-close"></a>
             <div class="modal-content">
-                <img src="//joybirdstudios.com/assets/img/ClimatePledgeRehearsals3.jpg" class="modal-image" alt="Modal image 3">
+                <img src="{{site.baseurl}}/assets/img/ClimatePledgeRehearsals3.jpg" class="modal-image" alt="Modal image 3">
                 <a href="#" class="close-button"></a>
             </div>
         </div>
@@ -482,7 +482,7 @@ p:not([class*="anim-title-line"]):not([style*="color: grey"]) {
 photos + BTS footage by Rob Sheridan Productions
 
 <!-- Content Sections -->
-<p>In the winter of 2022, we had the exciting opportunity to collaborate on visuals for Pearl Jam's 2024 Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
+<p>In the winter of 2024, we had the exciting opportunity to collaborate on visuals for Pearl Jam's Dark Matter World Tour. We joined an amazing creative team led by Creative Director Rob Sheridan and Producer Stephanie Sheridan.</p>
 
 <p>The concept for the project was to create something cosmic and awe inspiring, yet human. To bring this vision to life we developed <a title="View on Instagram" href="https://www.instagram.com/reel/DAJYEZZPrTB/?utm_source=ig_web_copy_link&amp;igsh=NTc4MTIwNjQ2YQ==" target="_blank" style="color:#1316ce;">innovative techniques</a> including a custom process that allowed us to paint with light&mdash;typically only possible within the realm of still photography&mdash;to craft a vast organic cosmic structure for the opening track of the album, &ldquo;Scared of Fear.&rdquo;</p>
 
@@ -508,32 +508,32 @@ photos + BTS footage by Rob Sheridan Productions
     <div class="carousel-slides">
         <!-- Slide 1 -->
         <div class="carousel-slide active">
-            <img src="//joybirdstudios.com/assets/img/Vancouver-BC-II.jpg" alt="Pearl Jam Dark Matter Tour at Vancouver BC - Crown of Light p2">
+            <img src="{{site.baseurl}}/assets/img/Vancouver-BC-II.jpg" alt="Pearl Jam Dark Matter Tour at Vancouver BC - Crown of Light p2">
         </div>
         
         <!-- Slide 2 -->
         <div class="carousel-slide">
-            <img src="//joybirdstudios.com/assets/img/ClimatePledgeRehearsals2 .jpg" alt="Pearl Jam Dark Matter Tour at Climate Pledge Rehearsals - The Sun p1">
+            <img src="{{site.baseurl}}/assets/img/ClimatePledgeRehearsals2 .jpg" alt="Pearl Jam Dark Matter Tour at Climate Pledge Rehearsals - The Sun p1">
         </div>
         
         <!-- Slide 3 -->
         <div class="carousel-slide">
-            <img src="//joybirdstudios.com/assets/img/Vancouver BC II  (1).jpg" alt="Pearl Jam Dark Matter Tour at Vancouver BC - The Sun p2">
+            <img src="{{site.baseurl}}/assets/img/Vancouver BC II  (1).jpg" alt="Pearl Jam Dark Matter Tour at Vancouver BC - The Sun p2">
         </div>
         
         <!-- Slide 4 -->
         <div class="carousel-slide">
-            <img src="//joybirdstudios.com/assets/img/Vancouver BC II.jpg" alt="Pearl Jam Dark Matter Tour at Vancouver BC - React Respond">
+            <img src="{{site.baseurl}}/assets/img/Vancouver BC II.jpg" alt="Pearl Jam Dark Matter Tour at Vancouver BC - React Respond">
         </div>
 
         <!-- Slide 5 -->
         <div class="carousel-slide">
-            <img src="//joybirdstudios.com/assets/img/Chicago Wrigley I (2).jpg" alt="Pearl Jam Dark Matter Tour at Chicago Wrigley - Crown of Light Wide">
+            <img src="{{site.baseurl}}/assets/img/Chicago Wrigley I (2).jpg" alt="Pearl Jam Dark Matter Tour at Chicago Wrigley - Crown of Light Wide">
         </div>
 
         <!-- Slide 6 -->
         <div class="carousel-slide">
-            <img src="//joybirdstudios.com/assets/img/Chicago Wrigley I.jpg" alt="Pearl Jam Dark Matter Tour at Chicago Wrigley - Purple Ripples">
+            <img src="{{site.baseurl}}/assets/img/Chicago Wrigley I.jpg" alt="Pearl Jam Dark Matter Tour at Chicago Wrigley - Purple Ripples">
         </div>
         
         <!-- Navigation Arrows -->
